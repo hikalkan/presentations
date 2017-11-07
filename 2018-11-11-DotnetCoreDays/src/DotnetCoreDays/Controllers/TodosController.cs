@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DotnetCoreDays.Controllers
 {
+    [Route("[controller]")]
     public class TodosController : Controller
     {
         private readonly TodoDbContext _dbContext;
@@ -32,7 +33,7 @@ namespace DotnetCoreDays.Controllers
         }
 
         [HttpDelete]
-        [Route("/Todos/{id}")]
+        [Route("{id}")]
         public async Task Delete(int id)
         {
             var todoItem = await _dbContext.TodoItems.FindAsync(id);

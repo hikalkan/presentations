@@ -6,7 +6,7 @@
         e.preventDefault();
 
         $.ajax({
-            url: '/Todos/Create',
+            url: '/Todos',
             type: 'POST',
             data: $('#TodoCreateForm').serializeFormToObject()
         }).then(function (result) {
