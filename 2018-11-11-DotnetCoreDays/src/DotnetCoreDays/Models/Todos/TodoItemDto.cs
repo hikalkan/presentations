@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace DotnetCoreDays.Models
+namespace DotnetCoreDays.Models.Todos
 {
     public class TodoItemDto
     {
