@@ -1,0 +1,41 @@
+﻿@page
+@model DotnetCoreDays.Pages.Todos.IndexModel
+
+<h2>Todo Items</h2>
+
+<div id="TodoCreateArea">
+    <input type="text" name="Text" id="TodoItemText" /> <button type="submit" id="TodoItemAddButton">Add</button>
+</div>
+
+<ul id="TodoList">
+    @foreach (var todoItem in Model.TodoItems)
+    {
+        <li data-id="@todoItem.Id">
+            <i class="fa fa-check"></i>
+            <span class="todo-item-text">@todoItem.Text</span>
+            <a class="todo-item-delete-link" href="#"><i class="fa fa-times"></i></a>
+        </li>
+    }
+</ul>
+
+@section styles
+    {
+    <environment names="Development">
+        <link href="~/Pages/Index.css" rel="stylesheet" />
+    </environment>
+
+    <environment names="Staging,Production">
+        <link href="~/Pages/Index.min.css" rel="stylesheet" />
+    </environment>
+}
+
+@section scripts
+    {
+    <environment names="Development">
+        <script src="~/Pages/Index.js"></script>
+    </environment>
+
+    <environment names="Staging,Production">
+        <script src="~/Pages/Index.min.js"></script>
+    </environment>
+}

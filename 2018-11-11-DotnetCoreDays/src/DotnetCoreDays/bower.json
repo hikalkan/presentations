@@ -1,0 +1,21 @@
+{
+  "name": "DotnetCoreDays",
+  "authors": [
+    "Halil İbrahim Kalkan <hi_kalkan@yahoo.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jQuery": "3.2.1",
+    "font-awesome": "fontawesome#^4.7.0"
+  }
+}

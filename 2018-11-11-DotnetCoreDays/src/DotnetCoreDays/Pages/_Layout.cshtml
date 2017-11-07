@@ -1,0 +1,40 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Dotnet Core Days</title>
+
+    <environment names="Development">
+        <link href="~/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    </environment>
+
+    <environment names="Staging,Production">
+        <link href="~/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    </environment>
+
+    @RenderSection("styles", false)
+
+</head>
+
+<body>
+
+    @RenderBody()
+
+    <environment names="Development">
+        <script src="~/lib/jQuery/dist/jquery.js"></script>
+    </environment>
+
+    <environment names="Staging,Production">
+        <script src="~/lib/jQuery/dist/jquery.min.js"></script>
+    </environment>
+
+    @RenderSection("scripts", false)
+
+</body>
+
+</html>
