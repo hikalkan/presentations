@@ -4,17 +4,15 @@
 <h2>Todo Items</h2>
 
 <div id="TodoCreateArea">
-    <input type="text" name="Text" id="TodoItemText" /> <button type="submit" id="TodoItemAddButton">Add</button>
+    <form id="TodoCreateForm" method="post">
+        <input type="text" name="Text" id="TodoItemText"/> <button type="submit" id="TodoItemAddButton">Add</button>
+    </form>
 </div>
 
 <ul id="TodoList">
     @foreach (var todoItem in Model.TodoItems)
     {
-        <li data-id="@todoItem.Id">
-            <i class="fa fa-check"></i>
-            <span class="todo-item-text">@todoItem.Text</span>
-            <a class="todo-item-delete-link" href="#"><i class="fa fa-times"></i></a>
-        </li>
+        @await Html.PartialAsync("_TodoItemOnList", todoItem)
     }
 </ul>
 

@@ -4,5 +4,11 @@
     "inputFiles": [
       "wwwroot/Pages/Index.js"
     ]
+  },
+  {
+    "outputFileName": "wwwroot/js/jquery.serializeFormToObject.min.js",
+    "inputFiles": [
+      "wwwroot/js/jquery.serializeFormToObject.js"
+    ]
   }
 ]

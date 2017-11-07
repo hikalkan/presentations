@@ -27,10 +27,12 @@
 
     <environment names="Development">
         <script src="~/lib/jQuery/dist/jquery.js"></script>
+        <script src="~/js/jquery.serializeFormToObject.js"></script>
     </environment>
 
     <environment names="Staging,Production">
         <script src="~/lib/jQuery/dist/jquery.min.js"></script>
+        <script src="~/js/jquery.serializeFormToObject.min.js"></script>
     </environment>
 
     @RenderSection("scripts", false)

@@ -6,18 +6,17 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DotnetCoreDays.Controllers
 {
-    [Route("api/todos")]
-    public class TodoController : Controller
+    public class TodosController : Controller
     {
         private readonly TodoDbContext _dbContext;
 
-        public TodoController(TodoDbContext dbContext)
+        public TodosController(TodoDbContext dbContext)
         {
             _dbContext = dbContext;
         }
 
         [HttpPost]
-        public async Task<TodoItemDto> Create(TodoItemCreateDto input)
+        public async Task<IActionResult> Create(TodoItemCreateDto input)
         {
             var todoItem = new TodoItem { Text = input.Text };
 
@@ -25,15 +24,15 @@ namespace DotnetCoreDays.Controllers
 
             await _dbContext.SaveChangesAsync();
 
-            return new TodoItemDto
+            return PartialView("~/Pages/Todos/_TodoItemOnList.cshtml", new TodoItemDto
             {
                 Id = todoItem.Id,
                 Text = todoItem.Text
-            };
+            });
         }
 
         [HttpDelete]
-        [Route("{id}")]
+        [Route("/Todos/{id}")]
         public async Task Delete(int id)
         {
             var todoItem = await _dbContext.TodoItems.FindAsync(id);

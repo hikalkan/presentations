@@ -1,0 +1,9 @@
+﻿@model DotnetCoreDays.Models.TodoItemDto
+@{
+    Layout = null;
+}
+<li data-id="@Model.Id">
+    <i class="fa fa-check"></i>
+    <span class="todo-item-text">@Model.Text</span>
+    <a class="todo-item-delete-link" href="#"><i class="fa fa-times"></i></a>
+</li>
