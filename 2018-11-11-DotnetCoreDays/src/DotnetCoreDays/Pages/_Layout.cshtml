@@ -1,4 +1,5 @@
-﻿@{
+﻿@using DotnetCoreDays.Views.Components.TodoCreateArea
+@{
     Layout = null;
 }
 
@@ -24,6 +25,10 @@
 <body>
 
     @RenderBody()
+    
+    <vc:footer></vc:footer>
+    
+    @*@await Component.InvokeAsync(typeof(FooterViewComponent)) // Alternative of <vc:footer></vc:footer> *@
 
     <environment names="Development">
         <script src="~/lib/jQuery/dist/jquery.js"></script>
