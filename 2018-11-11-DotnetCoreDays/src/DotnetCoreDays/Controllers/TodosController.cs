@@ -1,8 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using DotnetCoreDays.Db;
 using DotnetCoreDays.Domain;
-using DotnetCoreDays.Models;
 using DotnetCoreDays.Models.Todos;
 using Microsoft.AspNetCore.Mvc;
 
@@ -44,16 +42,9 @@ namespace DotnetCoreDays.Controllers
                 return;
             }
 
-            _dbContext.TodoItems.Remove(todoItem);
+            todoItem.IsDeleted = true;
 
             await _dbContext.SaveChangesAsync();
-        }
-
-        public class TodoItemCreateDto
-        {
-            [Required]
-            [StringLength(256)]
-            public string Text { get; set; }
         }
     }
 }

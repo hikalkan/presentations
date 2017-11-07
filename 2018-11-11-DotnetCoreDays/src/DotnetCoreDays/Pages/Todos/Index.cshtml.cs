@@ -3,7 +3,6 @@ using System.Collections.Immutable;
 using System.Linq;
 using System.Threading.Tasks;
 using DotnetCoreDays.Db;
-using DotnetCoreDays.Models;
 using DotnetCoreDays.Models.Todos;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;

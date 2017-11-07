@@ -1,15 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace DotnetCoreDays.Domain
+namespace DotnetCoreDays.Models.Todos
 {
-    public class TodoItem
+    public class TodoItemCreateDto
     {
-        public int Id { get; set; }
-
         [Required]
         [StringLength(256)]
         public string Text { get; set; }
-
-        public bool IsDeleted { get; set; }
     }
 }
