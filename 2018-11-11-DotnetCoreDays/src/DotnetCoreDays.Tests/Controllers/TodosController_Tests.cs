@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,11 +12,6 @@ namespace DotnetCoreDays.Tests.Controllers
 {
     public class TodosController_Tests : TestBase
     {
-        public TodosController_Tests()
-        {
-            
-        }
-
         [Fact]
         public async Task Create()
         {

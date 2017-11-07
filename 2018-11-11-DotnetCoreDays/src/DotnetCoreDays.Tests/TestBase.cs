@@ -4,7 +4,7 @@ using System.Net.Http;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
 
-namespace DotnetCoreDays.Tests.Controllers
+namespace DotnetCoreDays.Tests
 {
     public abstract class TestBase
     {
@@ -18,7 +18,7 @@ namespace DotnetCoreDays.Tests.Controllers
         {
             Server = new TestServer(
                 new WebHostBuilder()
-                    .UseContentRoot(CalculateContentRootOfWebProject())
+                    .UseContentRoot(GetContentFolderOfWebProject())
                     .UseStartup<Startup>()
             );
 
@@ -27,10 +27,12 @@ namespace DotnetCoreDays.Tests.Controllers
             ServiceProvider = Server.Host.Services;
         }
 
-        private string CalculateContentRootOfWebProject()
+        public string GetContentFolderOfWebProject()
         {
-            var currentDirectory = Directory.GetCurrentDirectory();
-            return Path.Combine(currentDirectory, "../../../../DotnetCoreDays");
+            return Path.Combine(
+                Directory.GetCurrentDirectory(),
+                "../../../../DotnetCoreDays"
+            );
         }
     }
 }
