@@ -12,5 +12,12 @@ namespace DotnetCoreDays.Db
         {
 
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<TodoItem>().HasQueryFilter(e => e.IsDeleted == false);
+        }
     }
 }

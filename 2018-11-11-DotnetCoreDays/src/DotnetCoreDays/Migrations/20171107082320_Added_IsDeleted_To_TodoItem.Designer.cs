@@ -11,9 +11,10 @@ using System;
 namespace DotnetCoreDays.Migrations
 {
     [DbContext(typeof(TodoDbContext))]
-    partial class TodoDbContextModelSnapshot : ModelSnapshot
+    [Migration("20171107082320_Added_IsDeleted_To_TodoItem")]
+    partial class Added_IsDeleted_To_TodoItem
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

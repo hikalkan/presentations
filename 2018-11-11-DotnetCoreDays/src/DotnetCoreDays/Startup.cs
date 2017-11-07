@@ -35,10 +35,6 @@ namespace DotnetCoreDays
             services.AddMvc(options =>
             {
                 options.Filters.Add<AuditFilter>();
-            })
-            .AddRazorPagesOptions(options =>
-            {
-                options.Conventions.AuthorizeFolder("/Admin");
             });
         }
 

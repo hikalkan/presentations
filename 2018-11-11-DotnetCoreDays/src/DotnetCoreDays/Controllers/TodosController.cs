@@ -17,7 +17,7 @@ namespace DotnetCoreDays.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(TodoItemCreateDto input)
+        public async Task<IActionResult> Create([FromBody] TodoItemCreateDto input)
         {
             var todoItem = new TodoItem { Text = input.Text };
 

@@ -8,7 +8,8 @@
         $.ajax({
             url: '/Todos',
             type: 'POST',
-            data: $('#TodoCreateForm').serializeFormToObject()
+            contentType: 'application/json',
+            data: JSON.stringify($('#TodoCreateForm').serializeFormToObject())
         }).then(function (result) {
             $('#TodoList').append(result);
             $('#TodoItemText').val('');
