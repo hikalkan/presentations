@@ -42,11 +42,12 @@ namespace DotnetCoreDays
         {
             app.UseDeveloperExceptionPage();
 
-            app.UseMiddleware<AuditMiddleware>();
+            app.UseMiddleware<AuditMiddleware>(); //Our custom middleware
 
             app.UseStaticFiles();
-            app.UseRequestLocalization();
+
             app.UseAuthentication();
+
             app.UseMvcWithDefaultRoute();
 
             SeedHelper.SeedData(app);
