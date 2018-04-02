@@ -7,7 +7,7 @@ namespace MultiTenancyDraft.Application
     {
         public Guid Id { get; set; }
 
-        public Guid? TenantId { get; set; }
+        public Guid? TenantId { get; private set; }
 
         public string Name { get; set; }
 
