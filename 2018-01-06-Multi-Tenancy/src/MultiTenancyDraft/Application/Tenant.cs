@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MultiTenancyDraft.Temporary
+namespace MultiTenancyDraft.Application
 {
     public class Tenant
     {

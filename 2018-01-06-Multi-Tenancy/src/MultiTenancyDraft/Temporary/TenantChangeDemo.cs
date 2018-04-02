@@ -1,4 +1,5 @@
-﻿using MultiTenancyDraft.Infrastructure;
+﻿using MultiTenancyDraft.Application;
+using MultiTenancyDraft.Infrastructure;
 
 namespace MultiTenancyDraft.Temporary
 {

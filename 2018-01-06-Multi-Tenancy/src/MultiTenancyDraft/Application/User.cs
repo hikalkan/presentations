@@ -1,7 +1,7 @@
 ﻿using System;
 using MultiTenancyDraft.Infrastructure;
 
-namespace MultiTenancyDraft.Temporary
+namespace MultiTenancyDraft.Application
 {
     public class User : IMultiTenant
     {

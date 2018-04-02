@@ -7,10 +7,10 @@ namespace MultiTenancyDraft
     {
         public static void Main(string[] args)
         {
-            BuildWebHost(args).Run();
+            BuildWebHostInternal(args).Run();
         }
 
-        public static IWebHost BuildWebHost(string[] args) =>
+        public static IWebHost BuildWebHostInternal(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
                 .Build();
