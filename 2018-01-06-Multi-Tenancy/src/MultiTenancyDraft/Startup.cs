@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
+using MultiTenancyDraft.Infrastructure;
 
 namespace MultiTenancyDraft
 {
@@ -16,6 +17,8 @@ namespace MultiTenancyDraft
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             app.UseAuthentication();
+
+            app.UseMiddleware<MultiTenancyMiddleware>();
 
             app.UseMvcWithDefaultRoute();
         }

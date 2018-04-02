@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MultiTenancyDraft.Infrastructure;
 
 namespace MultiTenancyDraft.Controllers
 {
@@ -6,7 +7,7 @@ namespace MultiTenancyDraft.Controllers
     {
         public ActionResult Index()
         {
-            return Content("OK");
+            return Content("Current tenant: " + TenantInfo.Current);
         }
     }
 }
