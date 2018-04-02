@@ -10,8 +10,7 @@ namespace MultiTenancyDraft
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.AddAuthentication()
-                .AddCookie();
+            services.AddAuthentication().AddCookie();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 
@@ -15,15 +17,45 @@ namespace MultiTenancyDraft.Infrastructure
 
         public async Task Invoke(HttpContext httpContext)
         {
-            TenantInfo.Current = new TenantInfo(Guid.NewGuid(), "acme");
-            try
+            using (TenantInfo.Change(FindTenant(httpContext)))
             {
                 await _next(httpContext);
             }
-            finally
+        }
+
+        private TenantInfo FindTenant(HttpContext httpContext)
+        {
+            var tenantId = FindFromClaims(httpContext) ??
+                           FindFromDomain(httpContext) ??
+                           FindFromHeader(httpContext) ??
+                           FindFromCookie(httpContext);
+
+            if (tenantId == null)
             {
-                TenantInfo.Current = null;
+                return null;
             }
+
+            return new TenantInfo(Guid.Parse(tenantId));
+        }
+
+        private static string FindFromClaims(HttpContext httpContext)
+        {
+            return httpContext.User.FindFirstValue("_tenantId");
+        }
+
+        private string FindFromDomain(HttpContext httpContext)
+        {
+            return null;
+        }
+
+        private string FindFromHeader(HttpContext httpContext)
+        {
+            return httpContext.Request.Headers["_tenantId"].FirstOrDefault();
+        }
+
+        private string FindFromCookie(HttpContext httpContext)
+        {
+            return httpContext.Request.Cookies["_tenantId"];
         }
     }
 }

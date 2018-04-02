@@ -16,10 +16,20 @@ namespace MultiTenancyDraft.Infrastructure
 
         public string Name { get; set; }
 
-        public TenantInfo(Guid id, string name)
+        public TenantInfo(Guid id, string name = null)
         {
             Id = id;
             Name = name;
+        }
+
+        public static IDisposable Change(TenantInfo tenantInfo)
+        {
+            var oldValue = Current;
+            Current = tenantInfo;
+            return new DisposeAction(() =>
+            {
+                Current = oldValue;
+            });
         }
 
         public override string ToString()
