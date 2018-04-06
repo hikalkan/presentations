@@ -25,12 +25,12 @@ namespace MultiTenancyDraft.Infrastructure
 
         private static string GetConnectionString(IServiceProvider serviceProvider) 
         {
-            var tenantStore = serviceProvider.GetRequiredService<ITenantStore>();
             if (TenantInfo.Current == null)
             {
                 return GetDefaultConnectionString();
             }
 
+            var tenantStore = serviceProvider.GetRequiredService<ITenantStore>();
             return tenantStore.FindConnectionString(TenantInfo.Current.Id) ??
                    GetDefaultConnectionString();
         }
