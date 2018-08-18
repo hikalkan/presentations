@@ -1,0 +1,24 @@
+//Declare dependencies to other modules
+[DependsOn(
+    typeof(AbpAuditingModule),
+    typeof(AbpLocalizationModule)
+    )]
+public class MyAppModule : AbpModule
+{
+    public override void ConfigureServices(ServiceConfigurationContext context)
+    {
+        //Configure other services!
+        context.Services.Configure<AbpAuditingOptions>(options =>
+        {
+            options.IsEnabled = true;
+        });
+
+        //Register new services
+        context.Services.AddAssemblyOf<MyAppModule>(); //Conventional registration
+    }
+
+    public override void OnApplicationInitialization(ApplicationInitializationContext context)
+    {
+        //Startup actions (seed data, start a background task... etc.)
+    }
+}
