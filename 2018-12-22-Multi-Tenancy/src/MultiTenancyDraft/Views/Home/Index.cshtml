@@ -1,0 +1,23 @@
+﻿@using MultiTenancyDraft.Application
+@using MultiTenancyDraft.Infrastructure
+@model List<Product>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Multi-Tenancy Draft</title>
+</head>
+<body>
+<div>
+    <p>Current tenant: @TenantInfo.Current</p>
+
+    <ul>
+        @foreach (var product in Model)
+        {
+            <li>@product.Name</li>
+        }
+    </ul>
+</div>
+</body>
+</html>
