@@ -1,0 +1,12 @@
+### Some of the problems to explain and solve
+
+- This makes hard or impossible to create cross-module database join queries. So, you can start to think data duplication and summary tables for querying.
+- Requires distributed transaction which may not be supported by all database systems.
+- It is now impossible to use cross-module transactions.
+- Instead of a simple, secure method call, you now deal with complexity of service-to-service communication.
+- Inter-service calls leads to slowness since it requires inter-process or inter-server communications.
+- How to communicate microservices securely?
+- A depended service may be offline/down at the time of communication.
+- A service may become a bottleneck if too many other services use it.
++ It gets harder to use the system by clients, either web applications or 3rd-party clients because now there are multiple (maybe hundreds) or services with different endpoints.
+- Application logging (and also audit logging) should be centralized, otherwise it would be impossible to track problems.
