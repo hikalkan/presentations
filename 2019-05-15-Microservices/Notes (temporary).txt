@@ -21,6 +21,6 @@ Running on Docker Containers - 1 minute / 59
 
 ### Final Parts
 
-Further Learning / Resources - 1 minutes / 60
+Further Learning / Resources - 1 minute / 60
 Summary - 1 minute / 61
 Questions - 3 minutes / 64
