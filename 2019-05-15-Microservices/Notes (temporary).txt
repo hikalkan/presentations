@@ -1,7 +1,7 @@
 ### Intro - 3 mins
 ### Part-1: From Monolithic to Microservice - 7 mins / 10
 
-### Implementation
+### Implementation - 49 minutes
 
 Overall Diagram & Solution - 4 mins / 14
 Authentication with IdentityServer4 - 3 mins / 17
@@ -10,10 +10,17 @@ API Gateways, Backend for Frontend approach, Ocelot & SHOW CODE - 5 mins / 29
 Synchronous communication (e.g. REST) between services + Dynamic C# API proxies - 3 mins / 32
 SHOW CODE - 4 minutes / 36
 Messaging & pub/sub messaging, Distributed Event Bus - 2 minutes / 38
-DEMO - 
-Data Duplication, Synchronization & Lookup
-Authorization & Permission System
-Service-to-Service Calls / Access Tokens
-Transaction Problem on Publishing Events
-Central Logging to Elasticsearch & Kibana UI
-Running on Docker Containers
+DEMO - 5 minutes / 43
+Data Duplication, Synchronization & Lookup - 4 minutes / 47
+SHOW CODE - 3 minutes / 50
+Authorization & Permission System - 2 minutes / 52
+Service-to-Service Calls / Access Tokens - 2 minutes / 54
+Transaction Problem on Publishing Events - 3 minutes / 57
+Central Logging to Elasticsearch & Kibana UI - 1 minute / 58
+Running on Docker Containers - 1 minute / 59
+
+### Final Parts
+
+Further Learning / Resources - 1 minutes / 60
+Summary - 1 minute / 61
+Questions - 3 minutes / 64
