@@ -8,11 +8,8 @@ namespace SimpleEventBusUsage.Publisher
 {
     public class PublisherDemo : ITransientDependency
     {
-        private readonly IDistributedEventBus _distributedEventBus;
-
-        public PublisherDemo(IDistributedEventBus distributedEventBus)
+        public PublisherDemo()
         {
-            _distributedEventBus = distributedEventBus;
         }
 
         public async Task RunAsync()
@@ -33,9 +30,7 @@ namespace SimpleEventBusUsage.Publisher
                     break;
                 }
 
-                await _distributedEventBus.PublishAsync(
-                    new StockCountChangedEvent(productId, newCount.To<int>())
-                );
+                //TODO: PUBLISH THE EVENT!!!
             }
         }
     }
