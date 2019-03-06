@@ -16,7 +16,7 @@
 2) Replace for TODO
 
 await _distributedEventBus.PublishAsync(
-    new StockCountChangedEvent(productId, newCount.To<int>())
+    new StockCountChangedEvent(productId, Convert.ToInt32(newCount))
 );
 
 ### SUBSCRIBER
