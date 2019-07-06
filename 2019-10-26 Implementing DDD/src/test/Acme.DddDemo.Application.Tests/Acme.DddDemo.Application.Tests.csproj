@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+  
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <RootNamespace>Acme.DddDemo</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Acme.DddDemo.Application\Acme.DddDemo.Application.csproj" />
+    <ProjectReference Include="..\Acme.DddDemo.Domain.Tests\Acme.DddDemo.Domain.Tests.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.1.1" />
+  </ItemGroup>
+
+</Project>

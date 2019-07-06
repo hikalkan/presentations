@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <RootNamespace>Acme.DddDemo</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Acme.DddDemo.EntityFrameworkCore.DbMigrations\Acme.DddDemo.EntityFrameworkCore.DbMigrations.csproj" />
+    <ProjectReference Include="..\Acme.DddDemo.TestBase\Acme.DddDemo.TestBase.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.1.1" />
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="2.2.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.2.4" />
+  </ItemGroup>
+
+</Project>
