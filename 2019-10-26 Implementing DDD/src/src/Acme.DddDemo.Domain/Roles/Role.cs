@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
+using JetBrains.Annotations;
 using Volo.Abp;
 using Volo.Abp.Domain.Entities;
 using Volo.Abp.Domain.Values;
@@ -208,19 +209,15 @@ namespace Acme.DddDemo.Roles
     public class IssueLabel
     {
     }
-    
 
-#endif
-
-
-    public class Issue
+     public class Issue
     {
         //...
         public Guid? AssignedUserId { get; private set; }
 
-        public async Task AssignTo(Guid userId, IUserIssueService userIssueService)
+        public async Task AssignTo(User user, IUserIssueService userIssueService)
         {
-            int currentIssueCount = await userIssueService.GetIssueCountAsync(userId);
+            int currentIssueCount = await userIssueService.GetIssueCountAsync(user.Id);
 
             if (currentIssueCount >= 3) //Can be read from a configuration
             {
@@ -229,8 +226,12 @@ namespace Acme.DddDemo.Roles
                 );
             }
 
-            AssignedUserId = userId;
+            AssignedUserId = user.Id;
         }
+    }
+
+    public class User : AggregateRoot<Guid>
+    {
     }
 
     public class IssueAssignmentException : Exception
@@ -252,8 +253,44 @@ namespace Acme.DddDemo.Roles
         WontFix,
         Canceled
     }
+    
 
-    public class IssueLabel
+#endif
+
+    public class Issue //Aggregate root
+    {
+        //...
+        public bool IsClosed { get; set; }
+        public Guid? AssignedUserId { get; set; }
+        public DateTime CreationTime { get; set; }
+        public DateTime? LastCommentTime { get; set; }
+
+        public bool IsInActive()
+        {
+            var daysAgo30 = DateTime.Now.Subtract(TimeSpan.FromDays(30));
+            return
+                //Open
+                !IsClosed &&
+
+                //Assigned to Nobody
+                AssignedUserId == null &&
+
+                //Created 30+ days ago
+                CreationTime < daysAgo30 &&
+
+                //No comment or the last comment was 30+ days ago
+                (LastCommentTime == null || LastCommentTime < daysAgo30);
+        }
+    }
+
+    public interface IIssueRepository
+    {
+        List<Issue> GetList(
+            [CanBeNull] IssueQueryFilter filter
+        );
+    }
+
+    public class IssueQueryFilter
     {
     }
 }
