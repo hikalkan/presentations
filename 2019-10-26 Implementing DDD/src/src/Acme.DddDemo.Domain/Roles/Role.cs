@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel.DataAnnotations;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using JetBrains.Annotations;
@@ -269,7 +270,7 @@ namespace Acme.DddDemo.Roles
             _issueRepository = issueRepository;
         }
 
-        public async Task Assign(Issue issue, User user)
+        public async Task AssignAsync(Issue issue, User user)
         {
             var currentIssueCount = await _issueRepository.GetCountAsync(
                 new IssueAssignmentSpecification(user)
@@ -327,6 +328,8 @@ namespace Acme.DddDemo.Roles
     {
         List<Issue> GetIssues(ISpecification<Issue> spec);
         Task<int> GetCountAsync(ISpecification<Issue> spec);
+        Task<Issue> GetAsync(Guid id);
+        Task UpdateAsync(Issue issue);
     }
 
     public class InActiveIssueSpecification : Specification<Issue>
@@ -395,5 +398,89 @@ namespace Acme.DddDemo.Roles
 
             var issues = _issueRepository.GetIssues(combinedSpec);
         }
+    }
+
+    public class IssueAppService
+    {
+        private readonly IssueManager _issueManager;
+        private readonly IIssueRepository _issueRepository;
+        private readonly IUserRepository _userRepository;
+
+        public IssueAppService(
+            IssueManager issueManager,
+            IIssueRepository issueRepository,
+            IUserRepository userRepository)
+        {
+            _issueManager = issueManager;
+            _issueRepository = issueRepository;
+            _userRepository = userRepository;
+        }
+
+        public async Task AssignAsync(IssueAssignDto input)
+        {
+            var issue = await _issueRepository.GetAsync(input.IssueId);
+            var user = await _userRepository.GetAsync(input.UserId);
+
+            await _issueManager.AssignAsync(issue, user);
+
+            await _issueRepository.UpdateAsync(issue);
+        }
+    }
+
+    public interface IUserRepository
+    {
+        Task<User> GetAsync(Guid inputUserId);
+    }
+
+    [Serializable]
+    public class IssueAssignDto
+    {
+        public Guid IssueId { get; set; }
+        public Guid UserId { get; set; }
+    }
+
+    public class UserAppService
+    {
+        public void Create(CreateUserDto input) { /* ... */ }
+        public void Update(UpdateUserDto input) { /* ... */ }
+        public void ChangeUserName(ChangeUserNameDto input) { /* ... */ }
+    }
+
+    public class CreateUserDto
+    {
+        [Required]
+        [StringLength(UserConsts.MaxUserNameLength)]
+        public string UserName { get; set; }
+
+        [Required]
+        [EmailAddress]
+        [StringLength(UserConsts.MaxEmailLength)]
+        public string Email { get; set; }
+
+        [Required]
+        [StringLength(
+            maximumLength: UserConsts.MaxPasswordLength,
+            MinimumLength = UserConsts.MinPasswordLength)]
+        public string Password { get; set; }
+    }
+
+    public static class UserConsts
+    {
+        public const int MaxUserNameLength = 32;
+        public const int MaxEmailLength = 256;
+        public const int MaxPasswordLength = 256;
+        public const int MinPasswordLength = 256;
+    }
+
+    public class UpdateUserDto
+    {
+        public Guid Id { get; set; }
+        public string Email { get; set; }
+    }
+
+    public class ChangeUserNameDto
+    {
+        public Guid Id { get; set; }
+        public string NewUserName { get; set; }
     }
 }
