@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using JetBrains.Annotations;
 using Volo.Abp;
 using Volo.Abp.Domain.Entities;
+using Volo.Abp.Domain.Services;
 using Volo.Abp.Domain.Values;
 using Volo.Abp.Identity;
+using Volo.Abp.Specifications;
 
 namespace Acme.DddDemo.Roles
 {
@@ -257,6 +260,36 @@ namespace Acme.DddDemo.Roles
 
 #endif
 
+    public class IssueManager //Domain service
+    {
+        private readonly IIssueRepository _issueRepository;
+
+        public IssueManager(IIssueRepository issueRepository)
+        {
+            _issueRepository = issueRepository;
+        }
+
+        public async Task Assign(Issue issue, User user)
+        {
+            var currentIssueCount = await _issueRepository.GetCountAsync(
+                new IssueAssignmentSpecification(user)
+            );
+
+            if (currentIssueCount >= 3) //Can be read from a configuration
+            {
+                throw new IssueAssignmentException(
+                    "Can not assign more than 3 issues to a user!"
+                );
+            }
+
+            issue.AssignTo(user);
+        }
+    }
+
+    public class User : AggregateRoot<Guid>
+    {
+    }
+
     public class Issue //Aggregate root
     {
         //...
@@ -264,33 +297,103 @@ namespace Acme.DddDemo.Roles
         public Guid? AssignedUserId { get; set; }
         public DateTime CreationTime { get; set; }
         public DateTime? LastCommentTime { get; set; }
+        public Guid? MileStoneId { get; set; }
 
         public bool IsInActive()
         {
-            var daysAgo30 = DateTime.Now.Subtract(TimeSpan.FromDays(30));
-            return
-                //Open
-                !IsClosed &&
+            return new InActiveIssueSpecification()
+                .IsSatisfiedBy(this);
+        }
 
-                //Assigned to Nobody
-                AssignedUserId == null &&
-
-                //Created 30+ days ago
-                CreationTime < daysAgo30 &&
-
-                //No comment or the last comment was 30+ days ago
-                (LastCommentTime == null || LastCommentTime < daysAgo30);
+        internal void AssignTo(User user)
+        {
+            AssignedUserId = user.Id;
         }
     }
 
-    public interface IIssueRepository
+    public class IssueAssignmentException : Exception
     {
-        List<Issue> GetList(
-            [CanBeNull] IssueQueryFilter filter
-        );
+        public IssueAssignmentException(string message)
+        {
+            throw new NotImplementedException();
+        }
     }
 
-    public class IssueQueryFilter
+    //List<Issue> GetList(
+    //    [CanBeNull] IssueQueryFilter filter
+    //);
+
+    public interface IIssueRepository
     {
+        List<Issue> GetIssues(ISpecification<Issue> spec);
+        Task<int> GetCountAsync(ISpecification<Issue> spec);
+    }
+
+    public class InActiveIssueSpecification : Specification<Issue>
+    {
+        public override Expression<Func<Issue, bool>> ToExpression()
+        {
+            var daysAgo30 = DateTime.Now.Subtract(TimeSpan.FromDays(30));
+            return issue =>
+                //Open
+                !issue.IsClosed &&
+
+                //Assigned to Nobody
+                issue.AssignedUserId == null &&
+
+                //Created 30+ days ago
+                issue.CreationTime < daysAgo30 &&
+
+                //No comment or the last comment was 30+ days ago
+                (issue.LastCommentTime == null || issue.LastCommentTime < daysAgo30);
+        }
+    }
+
+    public class IssueMilestoneSpecification : Specification<Issue>
+    {
+        private readonly Guid _mileStoneId;
+
+        public IssueMilestoneSpecification(Guid mileStoneId)
+        {
+            _mileStoneId = mileStoneId;
+        }
+
+        public override Expression<Func<Issue, bool>> ToExpression()
+        {
+            return issue => issue.MileStoneId == _mileStoneId;
+        }
+    }
+
+    public class IssueAssignmentSpecification : Specification<Issue>
+    {
+        private readonly User _user;
+
+        public IssueAssignmentSpecification(User user)
+        {
+            _user = user;
+        }
+
+        public override Expression<Func<Issue, bool>> ToExpression()
+        {
+            return issue => issue.AssignedUserId == _user.Id;
+        }
+    }
+
+    public class MyIssueService
+    {
+        private readonly IIssueRepository _issueRepository;
+
+        public MyIssueService(IIssueRepository issueRepository)
+        {
+            _issueRepository = issueRepository;
+        }
+
+        public void Foo(Guid milestoneId)
+        {
+            var combinedSpec = new InActiveIssueSpecification()
+                .And(new IssueMilestoneSpecification(milestoneId));
+
+            var issues = _issueRepository.GetIssues(combinedSpec);
+        }
     }
 }
