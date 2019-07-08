@@ -9,7 +9,9 @@ using Volo.Abp;
 using Volo.Abp.Domain.Entities;
 using Volo.Abp.Domain.Services;
 using Volo.Abp.Domain.Values;
+using Volo.Abp.Guids;
 using Volo.Abp.Identity;
+using Volo.Abp.ObjectMapping;
 using Volo.Abp.Specifications;
 
 namespace Acme.DddDemo.Roles
@@ -270,6 +272,8 @@ namespace Acme.DddDemo.Roles
             _issueRepository = issueRepository;
         }
 
+        public const int MaxAllowedIssueCount = 3;
+
         public async Task AssignAsync(Issue issue, User user)
         {
             var currentIssueCount = await _issueRepository.GetCountAsync(
@@ -278,9 +282,7 @@ namespace Acme.DddDemo.Roles
 
             if (currentIssueCount >= 3) //Can be read from a configuration
             {
-                throw new IssueAssignmentException(
-                    "Can not assign more than 3 issues to a user!"
-                );
+                throw new IssueAssignmentException(MaxAllowedIssueCount);
             }
 
             issue.AssignTo(user);
@@ -291,32 +293,79 @@ namespace Acme.DddDemo.Roles
     {
     }
 
-    public class Issue //Aggregate root
-    {
-        //...
-        public bool IsClosed { get; set; }
-        public Guid? AssignedUserId { get; set; }
-        public DateTime CreationTime { get; set; }
-        public DateTime? LastCommentTime { get; set; }
-        public Guid? MileStoneId { get; set; }
+    //public class Issue //Aggregate root
+    //{
+    //    //...
+    //    public bool IsClosed { get; set; }
+    //    public Guid? AssignedUserId { get; set; }
+    //    public DateTime CreationTime { get; set; }
+    //    public DateTime? LastCommentTime { get; set; }
+    //    public Guid? MileStoneId { get; set; }
 
-        public bool IsInActive()
+    //    public bool IsInActive()
+    //    {
+    //        return new InActiveIssueSpecification()
+    //            .IsSatisfiedBy(this);
+    //    }
+
+    //    internal void AssignTo(User user)
+    //    {
+    //        AssignedUserId = user.Id;
+    //    }
+    //}
+
+    public class Issue
+    {
+        public Guid Id { get; set; }
+        public Guid RepositoryId { get; set; }
+        public string Text { get; set; }
+
+        public Guid? AssignedUserId { get; set; }
+        public bool IsClosed { get; set; }
+        public IssueCloseReason? CloseReason { get; set; }
+
+        public Collection<IssueLabel> Labels { get; set; }
+
+        private Issue() { /* for deserialization */ }
+
+        public Issue(
+            Guid id,
+            Guid repositoryId,
+            string text)
         {
-            return new InActiveIssueSpecification()
-                .IsSatisfiedBy(this);
+            Id = id;
+            RepositoryId = repositoryId;
+            Text = Check.NotNullOrWhiteSpace(text, nameof(text));
+
+            Labels = new Collection<IssueLabel>();
         }
 
-        internal void AssignTo(User user)
+        public void AssignTo(User user)
         {
-            AssignedUserId = user.Id;
+            throw new NotImplementedException();
         }
     }
 
-    public class IssueAssignmentException : Exception
+    public enum IssueCloseReason
     {
-        public IssueAssignmentException(string message)
+        Fixed,
+        WontFix,
+        Canceled
+    }
+
+    public class IssueLabel
+    {
+    }
+
+
+    public class IssueAssignmentException : BusinessException
+    {
+        public IssueAssignmentException(int maxAllowedIssueCount)
+         : base(
+             "I0042",
+             $"Can not assign more {maxAllowedIssueCount} to a user!")
         {
-            throw new NotImplementedException();
+            
         }
     }
 
@@ -330,6 +379,7 @@ namespace Acme.DddDemo.Roles
         Task<int> GetCountAsync(ISpecification<Issue> spec);
         Task<Issue> GetAsync(Guid id);
         Task UpdateAsync(Issue issue);
+        Task InsertAsync(Issue issue);
     }
 
     public class InActiveIssueSpecification : Specification<Issue>
@@ -405,26 +455,62 @@ namespace Acme.DddDemo.Roles
         private readonly IssueManager _issueManager;
         private readonly IIssueRepository _issueRepository;
         private readonly IUserRepository _userRepository;
+        private readonly IGuidGenerator _guidGenerator;
+        private readonly IObjectMapper _objectMapper;
 
         public IssueAppService(
             IssueManager issueManager,
             IIssueRepository issueRepository,
-            IUserRepository userRepository)
+            IUserRepository userRepository, 
+            IGuidGenerator guidGenerator,
+            IObjectMapper objectMapper)
         {
             _issueManager = issueManager;
             _issueRepository = issueRepository;
             _userRepository = userRepository;
+            _guidGenerator = guidGenerator;
+            _objectMapper = objectMapper;
         }
 
-        public async Task AssignAsync(IssueAssignDto input)
+        public async Task<IssueDto> CreateAsync(IssueCreationDto input)
         {
-            var issue = await _issueRepository.GetAsync(input.IssueId);
-            var user = await _userRepository.GetAsync(input.UserId);
+            var issue = new Issue(
+                _guidGenerator.Create(),
+                input.RepositoryId,
+                input.Text
+            );
 
-            await _issueManager.AssignAsync(issue, user);
+            if (input.AssignedUserId.HasValue)
+            {
+                var user = await _userRepository.GetAsync(input.AssignedUserId.Value);
+                await _issueManager.AssignAsync(issue, user);
+            }
 
-            await _issueRepository.UpdateAsync(issue);
+            await _issueRepository.InsertAsync(issue);
+
+            return _objectMapper.Map<Issue, IssueDto>(issue);
         }
+
+        //public async Task AssignAsync(IssueAssignDto input)
+        //{
+        //    var issue = await _issueRepository.GetAsync(input.IssueId);
+        //    var user = await _userRepository.GetAsync(input.UserId);
+
+        //    await _issueManager.AssignAsync(issue, user);
+
+        //    await _issueRepository.UpdateAsync(issue);
+        //}
+    }
+
+    public class IssueCreationDto
+    {
+        public Guid RepositoryId { get; set; }
+        public string Text { get; set; }
+        public Guid? AssignedUserId { get; set; }
+    }
+
+    public class IssueDto
+    {
     }
 
     public interface IUserRepository
@@ -439,11 +525,75 @@ namespace Acme.DddDemo.Roles
         public Guid UserId { get; set; }
     }
 
-    public class UserAppService
+    //public class UserAppService
+    //{
+    //    private readonly IUserRepository _userRepository;
+
+    //    public UserAppService(IUserRepository userRepository)
+    //    {
+    //        _userRepository = userRepository;
+    //    }
+
+    //    public UserDto Create(CreateUserDto input)
+    //    {
+    //        var user = new User()
+    //    }
+
+    //    public void Update(UpdateUserDto input) { /* ... */ }
+    //    public void ChangeUserName(ChangeUserNameDto input) { /* ... */ }
+    //}
+
+    public interface IUserAppService
     {
-        public void Create(CreateUserDto input) { /* ... */ }
-        public void Update(UpdateUserDto input) { /* ... */ }
-        public void ChangeUserName(ChangeUserNameDto input) { /* ... */ }
+        UserDto Get(Guid id);
+        List<UserDto> GetList(UserListFilterDto input);
+
+        UserDto Create(CreateUserDto input);
+        UserDto Update(UpdateUserDto input);
+
+        UserDto ChangeUserName(ChangeUserNameDto input);
+    }
+
+    //public interface IUserAppService
+    //{
+    //    UserDto Get(Guid id);
+    //    UserNameAndEmailDto GetUserNameAndEmail(Guid id);
+    //    List<string> GetRoles(Guid id);
+
+    //    List<UserListDto> GetList(UserListFilterDto input);
+
+    //    UserCreationResultDto Create(CreateUserDto input);
+    //    UserUpdateResultDto Update(UpdateUserDto input);
+    //}
+
+    public class UserNameAndEmailDto
+    {
+    }
+
+    public class UserCreationResultDto
+    {
+    }
+
+    public class UserUpdateResultDto
+    {
+    }
+
+    public class UserListDto
+    {
+    }
+
+    public class UserListFilterDto
+    {
+    }
+
+    public class UserDto
+    {
+        public Guid Id { get; set; }
+        public string UserName { get; set; }
+        public string Email { get; set; }
+        public DateTime CreationTime { get; set; }
+
+        public List<string> Roles { get; set; }
     }
 
     public class CreateUserDto
@@ -483,4 +633,6 @@ namespace Acme.DddDemo.Roles
         public Guid Id { get; set; }
         public string NewUserName { get; set; }
     }
+
+    
 }
