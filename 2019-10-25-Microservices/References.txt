@@ -1,0 +1,2 @@
+https://crosp.net/blog/software-architecture/clean-architecture-part-1-databse-vs-domain/
+https://microservices.io

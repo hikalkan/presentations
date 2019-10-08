@@ -1,0 +1,45 @@
+### PUBLISHER
+
+------ appsettings.json -------------
+
+  "RabbitMQ": {
+    "EventBus": {
+      "ClientName": "SimpleEventBusUsage_Publisher",
+      "ExchangeName": "SimpleEventBusUsage"
+    }
+  }
+  
+------ PublisherDemo.cs -------------
+
+1) inject IDistributedEventBus distributedEventBus
+
+2) Replace for TODO
+
+await _distributedEventBus.PublishAsync(
+    new StockCountChangedEvent(productId, Convert.ToInt32(newCount))
+);
+
+### SUBSCRIBER
+
+------ appsettings.json -------------
+
+  "RabbitMQ": {
+    "EventBus": {
+      "ClientName": "SimpleEventBusUsage_Subscriber",
+      "ExchangeName": "SimpleEventBusUsage"
+    }
+  }
+
+------ MyEventHandler.cs -------------
+  
+public class MyEventHandler : IDistributedEventHandler<StockCountChangedEvent>, ITransientDependency
+{
+    public Task HandleEventAsync(StockCountChangedEvent eventData)
+    {
+        Console.WriteLine();
+        Console.WriteLine("Stock count changed for the product: " + eventData.ProductId);
+        Console.WriteLine("NEW COUNT: " + eventData.NewCount);
+
+        return Task.CompletedTask;
+    }
+}
