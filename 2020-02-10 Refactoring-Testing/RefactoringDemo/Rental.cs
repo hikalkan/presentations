@@ -11,5 +11,15 @@
             Movie = movie;
             DaysRented = daysRented;
         }
+
+        public double GetAmount()
+        {
+            return Movie.GetAmount(DaysRented);
+        }
+
+        public int GetFrequentRenterPoints()
+        {
+            return Movie.GetFrequentRenterPoints(DaysRented);
+        }
     }
 }

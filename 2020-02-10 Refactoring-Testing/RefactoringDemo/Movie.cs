@@ -4,12 +4,22 @@
     {
         public string Title { get; }
 
-        public PricingType PricingType { get; set; }
+        public Price Pricing { get; set; }
 
-        public Movie(string title, PricingType pricingType)
+        public Movie(string title, Price pricing)
         {
             Title = title;
-            PricingType = pricingType;
+            Pricing = pricing;
+        }
+
+        public double GetAmount(int daysRented)
+        {
+            return Pricing.GetAmount(daysRented);
+        }
+
+        public int GetFrequentRenterPoints(int daysRented)
+        {
+            return Pricing.GetFrequentRenterPoints(daysRented);
         }
     }
 }

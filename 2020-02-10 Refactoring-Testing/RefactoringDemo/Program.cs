@@ -8,9 +8,9 @@ namespace RefactoringDemo
         {
             // Create some movies
 
-            var iceAge = new Movie("Ice Age", PricingType.Children);
-            var pulpFiction = new Movie("Pulp Fiction", PricingType.Regular);
-            var joker = new Movie("Joker", PricingType.NewRelease);
+            var iceAge = new Movie("Ice Age", new ChildrenPrice());
+            var pulpFiction = new Movie("Pulp Fiction", new RegularPrice());
+            var joker = new Movie("Joker", new NewReleasePrice());
 
             // Create some customers
             
@@ -24,7 +24,7 @@ namespace RefactoringDemo
 
             // Print the invoices
 
-            Console.WriteLine(customerJohn.GetInvoice());
+            Console.WriteLine(customerJohn.GetHtmlInvoice());
         }
     }
 }
