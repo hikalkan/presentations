@@ -26,7 +26,7 @@ namespace RefactoringDemo
             {
                 double thisAmount = 0;
 
-                // Determine amounts for each line
+                // Determine amounts for each rental
                 switch (rental.Movie.PricingType)
                 {
                     case PricingType.Regular:
@@ -65,7 +65,7 @@ namespace RefactoringDemo
             }
 
             // Add footer lines
-            result += $"Total amount: {totalAmount:0.00} {Environment.NewLine}";
+            result += $"Total amount: {totalAmount:0.00}{Environment.NewLine}";
             result += "You earned " + frequentRenterPoints + " frequent renter points.";
 
             return result;
