@@ -1,4 +1,3 @@
-using Shouldly;
 using Xunit;
 
 namespace RefactoringDemo.Tests

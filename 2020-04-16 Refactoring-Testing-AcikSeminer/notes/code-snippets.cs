@@ -79,6 +79,28 @@ namespace RefactoringDemo.Tests
 /////////////////////////////////////////////////////////////////////////////////////////
 
 
+        private int GetFrequentRenterPoints(Rental rental)
+        {
+            // Add frequent renter points
+            var frequentRenterPoints = 1;
+
+            // Add bonus for a two-day new-release rental
+            if ((rental.Movie.PricingType == PricingType.NewRelease) && (rental.DaysRented > 1))
+            {
+                frequentRenterPoints++;
+            }
+
+            return frequentRenterPoints;
+        }
+        
+        //Değiştir:
+        
+        frequentRenterPoints += GetFrequentRenterPoints(rental);
+
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+
         [Fact]
         public void Should_Create_Invoice_With_A_Few_Rentals_And_Produce_Html_Output()
         {
