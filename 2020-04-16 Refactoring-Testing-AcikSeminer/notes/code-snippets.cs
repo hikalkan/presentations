@@ -1,23 +1,4 @@
         [Fact]
-        public void Should_Create_Invoice_With_No_Rental()
-        {
-            // Arrange
-
-            var customerJohn = new Customer("John Nash");
-
-            // Act
-
-            var invoice = customerJohn.GetInvoice();
-
-            // Assert
-
-            invoice.ShouldBe(
-                @"Rental record for John Nash:
-Total amount: 0.00
-You earned 0 frequent renter points.");
-        }
-
-        [Fact]
         public void Should_Create_Invoice_With_A_Few_Rentals()
         {
             // Arrange
@@ -46,6 +27,25 @@ You earned 0 frequent renter points.");
 - Joker (9.00)
 Total amount: 12.50
 You earned 4 frequent renter points.");
+        }
+
+        [Fact]
+        public void Should_Create_Invoice_With_No_Rental()
+        {
+            // Arrange
+
+            var customerJohn = new Customer("John Nash");
+
+            // Act
+
+            var invoice = customerJohn.GetInvoice();
+
+            // Assert
+
+            invoice.ShouldBe(
+                @"Rental record for John Nash:
+Total amount: 0.00
+You earned 0 frequent renter points.");
         }
         
         
