@@ -1,5 +1,5 @@
 ﻿using KonfDemo.ServerApp.Entities;
-using KonfDemo.ServerApp.Models.Liking;
+using KonfDemo.Shared.Models.Liking;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using Volo.Abp.AspNetCore.Mvc;

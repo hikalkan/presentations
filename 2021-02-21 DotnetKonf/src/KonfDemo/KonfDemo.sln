@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KonfDemo.ServerApp", "KonfD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KonfDemo.RazorLib", "KonfDemo.RazorLib\KonfDemo.RazorLib.csproj", "{2A321A4E-721C-43EF-804F-2E22FEDE0FE6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KonfDemo.Shared", "KonfDemo.Shared\KonfDemo.Shared.csproj", "{E79E77DA-D83B-49AE-AB3D-C7C88C979ACF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{2A321A4E-721C-43EF-804F-2E22FEDE0FE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A321A4E-721C-43EF-804F-2E22FEDE0FE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A321A4E-721C-43EF-804F-2E22FEDE0FE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E79E77DA-D83B-49AE-AB3D-C7C88C979ACF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E79E77DA-D83B-49AE-AB3D-C7C88C979ACF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E79E77DA-D83B-49AE-AB3D-C7C88C979ACF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E79E77DA-D83B-49AE-AB3D-C7C88C979ACF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -43,6 +43,19 @@ namespace KonfDemo.ServerApp
             {
                 options.AutoValidate = false;
             });
+
+            context.Services.AddCors(options =>
+            {
+                options.AddPolicy("DefaultCors", builder =>
+                {
+                    builder
+                        .WithOrigins("https://localhost:44341")
+                        .SetIsOriginAllowedToAllowWildcardSubdomains()
+                        .AllowAnyHeader()
+                        .AllowAnyMethod()
+                        .AllowCredentials();
+                });
+            });
         }
 
         public override void OnApplicationInitialization(ApplicationInitializationContext context)
@@ -56,6 +69,7 @@ namespace KonfDemo.ServerApp
             }
 
             app.UseRouting();
+            app.UseCors("DefaultCors");
             app.UseSwagger();
             app.UseSwaggerUI(options =>
             {

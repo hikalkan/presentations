@@ -1,4 +1,4 @@
-﻿namespace KonfDemo.ServerApp.Models.Liking
+﻿namespace KonfDemo.Shared.Models.Liking
 {
     public class LikingDto
     {

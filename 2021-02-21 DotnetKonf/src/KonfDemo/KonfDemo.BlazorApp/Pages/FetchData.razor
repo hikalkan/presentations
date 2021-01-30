@@ -23,12 +23,13 @@ else
         <tbody>
             @foreach (var forecast in forecasts)
             {
-                <tr>
-                    <td>@forecast.Date.ToShortDateString()</td>
-                    <td>@forecast.TemperatureC</td>
-                    <td>@forecast.TemperatureF</td>
-                    <td>@forecast.Summary</td>
-                </tr>
+            <tr>
+                <td>@forecast.Date.ToShortDateString()</td>
+                <td>@forecast.TemperatureC</td>
+                <td>@forecast.TemperatureF</td>
+                <td>@forecast.Summary</td>
+                <td><Liking Id="@("WeatherForecast_" + forecast.Id.ToString())" /></td>
+            </tr>
             }
         </tbody>
     </table>
@@ -44,6 +45,8 @@ else
 
     public class WeatherForecast
     {
+        public string Id { get; set; }
+
         public DateTime Date { get; set; }
 
         public int TemperatureC { get; set; }
