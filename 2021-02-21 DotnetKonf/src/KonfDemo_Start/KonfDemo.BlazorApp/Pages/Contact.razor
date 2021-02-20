@@ -8,7 +8,13 @@
 }
 else
 {
-    <ContactForm OnSubmit="ShowMessage" />
+    <ContactForm OnSubmit="ShowMessage">
+        <PreFormArea>
+            <div class="alert alert-info">
+                Hello, please write us what do you think about our website...
+            </div>            
+        </PreFormArea>
+    </ContactForm>
 }
 
 @code{
