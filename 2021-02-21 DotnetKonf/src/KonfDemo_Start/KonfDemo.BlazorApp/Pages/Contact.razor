@@ -1,0 +1,21 @@
+﻿@page "/contact"
+
+@if (submitted)
+{
+    <div class="alert alert-success">
+        Thank you for contacting us :)
+    </div>
+}
+else
+{
+    <ContactForm OnSubmit="ShowMessage" />
+}
+
+@code{
+    private bool submitted;
+
+    private void ShowMessage(MouseEventArgs e)
+    {
+        submitted = true;
+    }
+}
