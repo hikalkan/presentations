@@ -410,5 +410,14 @@ options.AddPolicy("DefaultCors", builder =>
 });
 ````
 
+* Move Counter.razor to the razor class Library
+* Set AdditionalAssemblies to make route working
+
+````html
+<Router AppAssembly="@typeof(Program).Assembly" 
+        AdditionalAssemblies="new[] { typeof(KonfDemo.RazorLib.Liking).Assembly }"
+        PreferExactMatches="@true">
+````
+
 
 
