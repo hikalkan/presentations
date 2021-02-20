@@ -21,7 +21,7 @@ namespace KonfDemo.RazorLib
         {
             var client = ClientFactory.CreateClient("ServerAPI");
 
-            LikeResult = await client.GetFromJsonAsync<LikingDto>($"/api/liking/{Id}");
+            LikeResult = await client.GetFromJsonAsync<LikingDto>($"https://localhost:44357/api/liking/{Id}");
         }
 
         private async Task UpvoteAsync()
@@ -31,7 +31,7 @@ namespace KonfDemo.RazorLib
                 new HttpRequestMessage
                 {
                     Method = new HttpMethod("POST"),                   
-                    RequestUri = new Uri($"/api/liking/{Id}/like")
+                    RequestUri = new Uri($"https://localhost:44357/api/liking/{Id}/like")
                 }
             );
 
@@ -45,7 +45,7 @@ namespace KonfDemo.RazorLib
                 new HttpRequestMessage
                 {
                     Method = new HttpMethod("POST"),
-                    RequestUri = new Uri($"/api/liking/{Id}/dislike")
+                    RequestUri = new Uri($"https://localhost:44357/api/liking/{Id}/dislike")                    
                 }
             );
 
