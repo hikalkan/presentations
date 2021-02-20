@@ -61,4 +61,9 @@
 
         await OnSubmit.InvokeAsync(Model);
     }
+
+    public void ClearForm()
+    {
+        Model = new ContactFormResultModel();
+    }
 }

@@ -121,6 +121,11 @@
 
         await OnSubmit.InvokeAsync(Model);
     }
+
+    public void ClearForm()
+    {
+        Model = new ContactFormResultModel();
+    }
 }
 ````
 
@@ -137,16 +142,19 @@
 }
 else
 {
-    <ContactForm OnSubmit="ContactFormSubmitted">
+    <ContactForm @ref="contactForm" OnSubmit="ContactFormSubmitted">
         <PreFormArea>
             <div class="alert alert-info">
                 Hello, please write us what do you think about our website...
             </div>            
         </PreFormArea>
     </ContactForm>
+    <button class="btn btn-secondary" @onclick="() => contactForm.ClearForm()">Clear</button>
 }
 
 @code{
+
+    private ContactForm contactForm;
     private ContactFormResultModel contactFormResult;
 
     private void ContactFormSubmitted(ContactFormResultModel result)
