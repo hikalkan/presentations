@@ -1,4 +1,5 @@
 ﻿@if (LikeResult != null)
 {
-    <span class="oi oi-thumb-up like-button" @onclick="UpvoteAsync"></span> @LikeResult.LikeCount <span class="oi oi-thumb-down like-button" @onclick="DownvoteAsync"></span> @LikeResult.DislikeCount
+    <span class="oi oi-thumb-up like-button @(LikeResult.LikeCount > LikeResult.DislikeCount ? "highlight" : "")" @onclick="UpvoteAsync"></span> @LikeResult.LikeCount
+    <span class="oi oi-thumb-down like-button @(LikeResult.LikeCount < LikeResult.DislikeCount ? "highlight" : "")" @onclick="DownvoteAsync"></span> @LikeResult.DislikeCount
 }
