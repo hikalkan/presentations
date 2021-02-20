@@ -28,6 +28,7 @@ else
                     <td>@forecast.TemperatureC</td>
                     <td>@forecast.TemperatureF</td>
                     <td>@forecast.Summary</td>
+                    <td><Liking Id="@("WeatherForecast_" + forecast.Id.ToString())" /></td>
                 </tr>
             }
         </tbody>
@@ -44,6 +45,8 @@ else
 
     public class WeatherForecast
     {
+        public string Id { get; set; }
+
         public DateTime Date { get; set; }
 
         public int TemperatureC { get; set; }
