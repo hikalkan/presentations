@@ -31,7 +31,7 @@ namespace KonfDemo.RazorLib
                 new HttpRequestMessage
                 {
                     Method = new HttpMethod("POST"),                   
-                    RequestUri = new Uri($"https://localhost:44360/api/liking/{Id}/like")
+                    RequestUri = new Uri($"/api/liking/{Id}/like")
                 }
             );
 
@@ -45,7 +45,7 @@ namespace KonfDemo.RazorLib
                 new HttpRequestMessage
                 {
                     Method = new HttpMethod("POST"),
-                    RequestUri = new Uri($"https://localhost:44360/api/liking/{Id}/dislike")
+                    RequestUri = new Uri($"/api/liking/{Id}/dislike")
                 }
             );
 

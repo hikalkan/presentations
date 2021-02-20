@@ -49,7 +49,7 @@ namespace KonfDemo.ServerApp
                 options.AddPolicy("DefaultCors", builder =>
                 {
                     builder
-                        .WithOrigins("https://localhost:44341")
+                        .WithOrigins("https://localhost:44326")
                         .SetIsOriginAllowedToAllowWildcardSubdomains()
                         .AllowAnyHeader()
                         .AllowAnyMethod()

@@ -21,7 +21,7 @@ namespace KonfDemo.BlazorApp
 
             builder.Services.AddHttpClient(
                 "ServerAPI",
-                client => client.BaseAddress = new Uri("https://localhost:44360/")
+                client => client.BaseAddress = new Uri("https://localhost:44357/")
             );
 
             await builder.Build().RunAsync();
