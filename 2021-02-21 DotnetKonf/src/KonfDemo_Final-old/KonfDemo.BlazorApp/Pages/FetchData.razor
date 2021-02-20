@@ -23,13 +23,13 @@ else
         <tbody>
             @foreach (var forecast in forecasts)
             {
-                <tr>
-                    <td>@forecast.Date.ToShortDateString()</td>
-                    <td>@forecast.TemperatureC</td>
-                    <td>@forecast.TemperatureF</td>
-                    <td>@forecast.Summary</td>
-                    <td><Liking Id="@("WeatherForecast_" + forecast.Id.ToString())" /></td>
-                </tr>
+            <tr>
+                <td>@forecast.Date.ToShortDateString()</td>
+                <td>@forecast.TemperatureC</td>
+                <td>@forecast.TemperatureF</td>
+                <td>@forecast.Summary</td>
+                <td><Liking Id="@("WeatherForecast_" + forecast.Id.ToString())" /></td>
+            </tr>
             }
         </tbody>
     </table>
