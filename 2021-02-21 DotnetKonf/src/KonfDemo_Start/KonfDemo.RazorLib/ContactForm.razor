@@ -9,7 +9,7 @@
             <div class="form-group">
                 <label class="col-md-3 control-label" for="name">Name</label>
                 <div class="col-md-9">
-                    <input id="name" name="name" type="text" placeholder="Your name" class="form-control">
+                    <input id="name" @bind="Model.Name" name="name" type="text" placeholder="Your name" class="form-control">
                 </div>
             </div>
 
@@ -19,7 +19,7 @@
                 <div class="form-group">
                     <label class="col-md-3 control-label" for="email">Your E-mail</label>
                     <div class="col-md-9">
-                        <input id="email" name="email" type="text" placeholder="Your email" class="form-control">
+                        <input id="email" @bind="Model.Email" name="email" type="text" placeholder="Your email" class="form-control">
                     </div>
                 </div>
             }
@@ -28,7 +28,7 @@
             <div class="form-group">
                 <label class="col-md-3 control-label" for="message">Your message</label>
                 <div class="col-md-9">
-                    <textarea class="form-control" id="message" name="message" placeholder="Please enter your message here..." rows="5"></textarea>
+                    <textarea class="form-control" @bind="Model.Message" id="message" name="message" placeholder="Please enter your message here..." rows="5"></textarea>
                 </div>
             </div>
 
@@ -48,15 +48,17 @@
     public bool GetEmail { get; set; } = true;
 
     [Parameter]
-    public EventCallback<MouseEventArgs> OnSubmit { get; set; }
+    public EventCallback<ContactFormResultModel> OnSubmit { get; set; }
 
     [Parameter]
     public RenderFragment PreFormArea { get; set; }
+
+    private ContactFormResultModel Model { get; set; } = new ContactFormResultModel();
 
     private async Task OnFormSubmit(MouseEventArgs e)
     {
         //TODO: Send form to the server...
 
-        await OnSubmit.InvokeAsync(e);
+        await OnSubmit.InvokeAsync(Model);
     }
 }

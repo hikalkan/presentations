@@ -1,14 +1,14 @@
 ﻿@page "/contact"
 
-@if (submitted)
+@if (contactFormResult != null)
 {
     <div class="alert alert-success">
-        Thank you for contacting us :)
+        Thank you @contactFormResult.Name for contacting us :)
     </div>
 }
 else
 {
-    <ContactForm OnSubmit="ShowMessage">
+    <ContactForm OnSubmit="ContactFormSubmitted">
         <PreFormArea>
             <div class="alert alert-info">
                 Hello, please write us what do you think about our website...
@@ -18,10 +18,10 @@ else
 }
 
 @code{
-    private bool submitted;
+    private ContactFormResultModel contactFormResult;
 
-    private void ShowMessage(MouseEventArgs e)
+    private void ContactFormSubmitted(ContactFormResultModel result)
     {
-        submitted = true;
+        contactFormResult = result;
     }
 }
