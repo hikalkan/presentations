@@ -1,9 +1,0 @@
-﻿.like-button {
-    cursor: pointer;
-    margin: 5px;
-}
-
-    .like-button.highlight {
-        font-size: 1.2em;
-        color: blue;
-    }
