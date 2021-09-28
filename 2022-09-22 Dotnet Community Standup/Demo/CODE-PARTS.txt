@@ -1,0 +1,53 @@
+public interface IValuesAppService : IApplicationService
+{
+    Task<int> GetAsync();
+    Task IncreaseAsync();
+}
+
+//////////////////////////////////////////////////////////////
+
+public class ValuesAppService : ApplicationService, IValuesAppService
+{
+    private static int _value = 42;
+    
+    public async Task<int> GetAsync()
+    {
+        return _value;
+    }
+
+    public Task IncreaseAsync()
+    {
+        _value++;
+        return Task.CompletedTask;
+    }
+}
+
+//////////////////////////////////////////////////////////////
+
+<p>Current value: @Value</p>
+<Button Color="Color.Primary" Clicked="IncreaseAsync">Increase</Button>
+    
+//////////////////////////////////////////////////////////////
+
+public partial class Index
+{
+    private int Value { get; set; }
+    
+    private readonly IValuesAppService _valuesAppService;
+
+    public Index(IValuesAppService valuesAppService)
+    {
+        _valuesAppService = valuesAppService;
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        Value = await _valuesAppService.GetAsync();
+    }
+
+    private async Task IncreaseAsync()
+    {
+        await _valuesAppService.IncreaseAsync();
+        Value = await _valuesAppService.GetAsync();
+    }
+}
