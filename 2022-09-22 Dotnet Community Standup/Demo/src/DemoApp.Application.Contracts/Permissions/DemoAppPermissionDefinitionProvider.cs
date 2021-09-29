@@ -10,7 +10,7 @@ namespace DemoApp.Permissions
         {
             var myGroup = context.AddGroup(DemoAppPermissions.GroupName);
             //Define your own permissions here. Example:
-            //myGroup.AddPermission(DemoAppPermissions.MyPermission1, L("Permission:MyPermission1"));
+            myGroup.AddPermission("CanIncreaseValue", L("CanIncreaseValue"));
         }
 
         private static LocalizableString L(string name)
