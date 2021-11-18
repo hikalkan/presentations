@@ -1,11 +1,12 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Volo.Abp.DependencyInjection;
 
 namespace Demo.Publisher
 {
-    public class HelloWorldService : ITransientDependency
+    public class PublisherService : ITransientDependency
     {
-        public void SayHello()
+        public async Task RunAsync()
         {
             Console.WriteLine("\tHello World!");
         }

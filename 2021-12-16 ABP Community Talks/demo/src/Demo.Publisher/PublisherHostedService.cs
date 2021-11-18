@@ -10,31 +10,27 @@ namespace Demo.Publisher
     {
         private readonly IAbpApplicationWithExternalServiceProvider _application;
         private readonly IServiceProvider _serviceProvider;
-        private readonly HelloWorldService _helloWorldService;
+        private readonly PublisherService _publisherService;
 
         public PublisherHostedService(
             IAbpApplicationWithExternalServiceProvider application,
             IServiceProvider serviceProvider,
-            HelloWorldService helloWorldService)
+            PublisherService publisherService)
         {
             _application = application;
             _serviceProvider = serviceProvider;
-            _helloWorldService = helloWorldService;
+            _publisherService = publisherService;
         }
 
-        public Task StartAsync(CancellationToken cancellationToken)
+        public async Task StartAsync(CancellationToken cancellationToken)
         {
             _application.Initialize(_serviceProvider);
-
-            _helloWorldService.SayHello();
-
-            return Task.CompletedTask;
+            await _publisherService.RunAsync();
         }
 
         public Task StopAsync(CancellationToken cancellationToken)
         {
             _application.Shutdown();
-
             return Task.CompletedTask;
         }
     }
