@@ -2,6 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Volo.Abp.Autofac;
+using Volo.Abp.EventBus.RabbitMq;
 using Volo.Abp.Modularity;
 
 namespace Demo.Subscriber
@@ -9,6 +10,7 @@ namespace Demo.Subscriber
 
     [DependsOn(
         typeof(AbpAutofacModule),
+        typeof(AbpEventBusRabbitMqModule),
         typeof(SharedModule)
     )]
     public class SubscriberModule : AbpModule
