@@ -6,6 +6,11 @@ using Volo.Abp.EntityFrameworkCore;
 using Volo.Abp.EntityFrameworkCore.SqlServer;
 using Demo.Shared;
 using Volo.Abp.EventBus.RabbitMq;
+using Medallion.Threading;
+using StackExchange.Redis;
+using Medallion.Threading.Redis;
+using Volo.Abp.EventBus.Distributed;
+using Volo.Abp.EntityFrameworkCore.DistributedEvents;
 
 namespace Demo.Publisher
 {
@@ -33,6 +38,25 @@ namespace Demo.Publisher
             Configure<AbpDbContextOptions>(options =>
             {
                 options.UseSqlServer();
+            });
+
+            context.Services.AddSingleton<IDistributedLockProvider>(sp =>
+            {
+                var connection = ConnectionMultiplexer.Connect(configuration["Redis:Configuration"]);
+                return new RedisDistributedSynchronizationProvider(connection.GetDatabase());
+            });
+
+            Configure<AbpDistributedEventBusOptions>(options =>
+            {
+                options.Outboxes.Configure(config =>
+                {
+                    config.UseDbContext<OrderDbContext>();
+                });
+
+                options.Inboxes.Configure(config =>
+                {
+                    config.UseDbContext<OrderDbContext>();
+                });
             });
         }
     }
