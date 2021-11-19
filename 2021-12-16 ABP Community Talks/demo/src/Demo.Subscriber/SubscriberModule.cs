@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Demo.Shared;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Volo.Abp.Autofac;
 using Volo.Abp.Modularity;
@@ -7,7 +8,8 @@ namespace Demo.Subscriber
 {
 
     [DependsOn(
-        typeof(AbpAutofacModule)
+        typeof(AbpAutofacModule),
+        typeof(SharedModule)
     )]
     public class SubscriberModule : AbpModule
     {

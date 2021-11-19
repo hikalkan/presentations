@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.Core" Version="5.0.0-rc.1" />
+  </ItemGroup>
+
 </Project>

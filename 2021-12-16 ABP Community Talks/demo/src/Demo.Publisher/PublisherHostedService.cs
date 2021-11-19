@@ -10,22 +10,22 @@ namespace Demo.Publisher
     {
         private readonly IAbpApplicationWithExternalServiceProvider _application;
         private readonly IServiceProvider _serviceProvider;
-        private readonly PublisherService _publisherService;
+        private readonly OrderService _orderService;
 
         public PublisherHostedService(
             IAbpApplicationWithExternalServiceProvider application,
             IServiceProvider serviceProvider,
-            PublisherService publisherService)
+            OrderService publisherService)
         {
             _application = application;
             _serviceProvider = serviceProvider;
-            _publisherService = publisherService;
+            _orderService = publisherService;
         }
 
         public async Task StartAsync(CancellationToken cancellationToken)
         {
             _application.Initialize(_serviceProvider);
-            await _publisherService.RunAsync();
+            await _orderService.RunAsync();
         }
 
         public Task StopAsync(CancellationToken cancellationToken)
