@@ -78,7 +78,8 @@ namespace Demo.Publisher
                     Amount = order.Amount,
                     TotalPrice = order.TotalPrice
                 }
-                //,onUnitOfWorkComplete: false //enable this line to immediately publish the event
+                //,onUnitOfWorkComplete: false
+                //,useOutbox: false
                 );
 
             if (order.Amount > 5)
