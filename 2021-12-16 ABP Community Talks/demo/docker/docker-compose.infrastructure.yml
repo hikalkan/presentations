@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:3.8.11-management-alpine
+    networks:
+      - abp-demoapp
+networks:
+  abp-demoapp:
+    external: true

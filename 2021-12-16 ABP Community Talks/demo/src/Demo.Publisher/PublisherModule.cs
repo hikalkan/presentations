@@ -5,6 +5,7 @@ using Volo.Abp.Modularity;
 using Volo.Abp.EntityFrameworkCore;
 using Volo.Abp.EntityFrameworkCore.SqlServer;
 using Demo.Shared;
+using Volo.Abp.EventBus.RabbitMq;
 
 namespace Demo.Publisher
 {
@@ -12,7 +13,8 @@ namespace Demo.Publisher
     [DependsOn(
         typeof(AbpAutofacModule),
         typeof(AbpEntityFrameworkCoreSqlServerModule),
-        typeof(SharedModule)
+        typeof(SharedModule),
+        typeof(AbpEventBusRabbitMqModule)
     )]
     public class PublisherModule : AbpModule
     {
