@@ -77,7 +77,9 @@ namespace Demo.Publisher
                     ProductCode = order.ProductCode,
                     Amount = order.Amount,
                     TotalPrice = order.TotalPrice
-                });
+                }
+                //,onUnitOfWorkComplete: false //enable this line to immediately publish the event
+                );
 
             if (order.Amount > 5)
             {
