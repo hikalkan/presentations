@@ -40,12 +40,14 @@ namespace Demo.Publisher
                 options.UseSqlServer();
             });
 
+            /* USE REDIS AS THE DISTRIBUTED LOCK PROVIDER */
             context.Services.AddSingleton<IDistributedLockProvider>(sp =>
             {
                 var connection = ConnectionMultiplexer.Connect(configuration["Redis:Configuration"]);
                 return new RedisDistributedSynchronizationProvider(connection.GetDatabase());
             });
 
+            /* CONFIGURE THE DBCONTEXT TO SUPPORT OUTBOX AND INBOX */
             Configure<AbpDistributedEventBusOptions>(options =>
             {
                 options.Outboxes.Configure(config =>
