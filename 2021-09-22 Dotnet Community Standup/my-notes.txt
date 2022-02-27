@@ -1,0 +1,9 @@
+* Main solution
+  * Hosting application
+  * UI Layer (Consier MVC UI, explain Angular UI later)
+  * Service Layer
+  * Contracts layer (to isolate services from UI)
+* Module solution
+  * UI Layer (if the UI was designed as modular) - Optional
+  * Service Layer
+  * Contracts Layer
