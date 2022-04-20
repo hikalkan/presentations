@@ -1,12 +1,13 @@
+using ECommerce.Contracts;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace ECommerce.Pages
 {
     public class CustomersModel : PageModel
     {
-        private readonly CustomerService _customerService;
+        private readonly ICustomerService _customerService;
 
-        public CustomersModel(CustomerService customerService)
+        public CustomersModel(ICustomerService customerService)
         {
             _customerService = customerService;
         }

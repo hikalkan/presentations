@@ -1,6 +1,8 @@
-﻿namespace ECommerce.Pages
+﻿using ECommerce.Contracts;
+
+namespace ECommerce.Services
 {
-    public class CustomerService
+    public class CustomerService : ICustomerService
     {
         public object GetListAsync()
         {
