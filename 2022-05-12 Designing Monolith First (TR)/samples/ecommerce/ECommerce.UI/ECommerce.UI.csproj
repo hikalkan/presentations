@@ -6,4 +6,2138 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Localization\ECommerce\ar.json" />
+    <None Remove="Localization\ECommerce\cs.json" />
+    <None Remove="Localization\ECommerce\de-DE.json" />
+    <None Remove="Localization\ECommerce\en-GB.json" />
+    <None Remove="Localization\ECommerce\en.json" />
+    <None Remove="Localization\ECommerce\es.json" />
+    <None Remove="Localization\ECommerce\fi.json" />
+    <None Remove="Localization\ECommerce\fr.json" />
+    <None Remove="Localization\ECommerce\hi.json" />
+    <None Remove="Localization\ECommerce\hu.json" />
+    <None Remove="Localization\ECommerce\is.json" />
+    <None Remove="Localization\ECommerce\it.json" />
+    <None Remove="Localization\ECommerce\nl.json" />
+    <None Remove="Localization\ECommerce\pl-PL.json" />
+    <None Remove="Localization\ECommerce\pt-BR.json" />
+    <None Remove="Localization\ECommerce\ro-RO.json" />
+    <None Remove="Localization\ECommerce\ru.json" />
+    <None Remove="Localization\ECommerce\sk.json" />
+    <None Remove="Localization\ECommerce\sl.json" />
+    <None Remove="Localization\ECommerce\tr.json" />
+    <None Remove="Localization\ECommerce\vi.json" />
+    <None Remove="Localization\ECommerce\zh-Hans.json" />
+    <None Remove="Localization\ECommerce\zh-Hant.json" />
+    <None Remove="Pages\Customers.cshtml" />
+    <None Remove="Pages\Index.cshtml" />
+    <None Remove="Pages\_ViewImports.cshtml" />
+    <None Remove="wwwroot\global-styles.css" />
+    <None Remove="wwwroot\libs\@fortawesome\fontawesome-free\css\all.css" />
+    <None Remove="wwwroot\libs\@fortawesome\fontawesome-free\css\v4-shims.css" />
+    <None Remove="wwwroot\libs\@fortawesome\fontawesome-free\webfonts\fa-brands-400.eot" />
+    <None Remove="wwwroot\libs\@fortawesome\fontawesome-free\webfonts\fa-brands-400.svg" />
+    <None Remove="wwwroot\libs\@fortawesome\fontawesome-free\webfonts\fa-brands-400.ttf" />
+    <None Remove="wwwroot\libs\@fortawesome\fontawesome-free\webfonts\fa-brands-400.woff" />
+    <None Remove="wwwroot\libs\@fortawesome\fontawesome-free\webfonts\fa-brands-400.woff2" />
+    <None Remove="wwwroot\libs\@fortawesome\fontawesome-free\webfonts\fa-regular-400.eot" />
+    <None Remove="wwwroot\libs\@fortawesome\fontawesome-free\webfonts\fa-regular-400.svg" />
+    <None Remove="wwwroot\libs\@fortawesome\fontawesome-free\webfonts\fa-regular-400.ttf" />
+    <None Remove="wwwroot\libs\@fortawesome\fontawesome-free\webfonts\fa-regular-400.woff" />
+    <None Remove="wwwroot\libs\@fortawesome\fontawesome-free\webfonts\fa-regular-400.woff2" />
+    <None Remove="wwwroot\libs\@fortawesome\fontawesome-free\webfonts\fa-solid-900.eot" />
+    <None Remove="wwwroot\libs\@fortawesome\fontawesome-free\webfonts\fa-solid-900.svg" />
+    <None Remove="wwwroot\libs\@fortawesome\fontawesome-free\webfonts\fa-solid-900.ttf" />
+    <None Remove="wwwroot\libs\@fortawesome\fontawesome-free\webfonts\fa-solid-900.woff" />
+    <None Remove="wwwroot\libs\@fortawesome\fontawesome-free\webfonts\fa-solid-900.woff2" />
+    <None Remove="wwwroot\libs\abp\core\abp.css" />
+    <None Remove="wwwroot\libs\abp\core\abp.js" />
+    <None Remove="wwwroot\libs\abp\jquery\abp.jquery.js" />
+    <None Remove="wwwroot\libs\abp\luxon\abp.luxon.js" />
+    <None Remove="wwwroot\libs\abp\utils\abp-utils.umd.js" />
+    <None Remove="wwwroot\libs\abp\utils\abp-utils.umd.js.map" />
+    <None Remove="wwwroot\libs\abp\utils\abp-utils.umd.min.js" />
+    <None Remove="wwwroot\libs\abp\utils\abp-utils.umd.min.js.map" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\bootstrap-datepicker.css.map" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\bootstrap-datepicker.min.css" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\bootstrap-datepicker.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker-en-CA.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.ar-tn.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.ar.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.az.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.bg.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.bm.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.bn.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.br.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.bs.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.ca.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.cs.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.cy.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.da.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.de.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.el.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.en-AU.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.en-CA.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.en-GB.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.en-IE.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.en-NZ.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.en-ZA.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.eo.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.es.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.et.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.eu.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.fa.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.fi.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.fo.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.fr-CH.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.fr.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.gl.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.he.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.hi.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.hr.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.hu.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.hy.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.id.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.is.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.it-CH.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.it.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.ja.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.ka.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.kh.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.kk.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.km.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.ko.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.kr.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.lt.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.lv.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.me.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.mk.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.mn.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.ms.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.nl-BE.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.nl.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.no.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.oc.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.pl.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.pt-BR.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.pt.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.ro.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.rs-latin.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.rs.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.ru.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.si.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.sk.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.sl.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.sq.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.sr-latin.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.sr.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.sv.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.sw.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.ta.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.tg.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.th.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.tk.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.tr.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.uk.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.uz-cyrl.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.uz-latn.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.vi.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.zh-CN.min.js" />
+    <None Remove="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.zh-TW.min.js" />
+    <None Remove="wwwroot\libs\bootstrap\css\bootstrap.css" />
+    <None Remove="wwwroot\libs\bootstrap\css\bootstrap.css.map" />
+    <None Remove="wwwroot\libs\bootstrap\css\bootstrap.min.css" />
+    <None Remove="wwwroot\libs\bootstrap\css\bootstrap.min.css.map" />
+    <None Remove="wwwroot\libs\bootstrap\css\bootstrap.rtl.css" />
+    <None Remove="wwwroot\libs\bootstrap\css\bootstrap.rtl.css.map" />
+    <None Remove="wwwroot\libs\bootstrap\css\bootstrap.rtl.min.css" />
+    <None Remove="wwwroot\libs\bootstrap\css\bootstrap.rtl.min.css.map" />
+    <None Remove="wwwroot\libs\bootstrap\js\bootstrap.bundle.js" />
+    <None Remove="wwwroot\libs\bootstrap\js\bootstrap.bundle.js.map" />
+    <None Remove="wwwroot\libs\bootstrap\js\bootstrap.bundle.min.js" />
+    <None Remove="wwwroot\libs\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <None Remove="wwwroot\libs\bootstrap\js\bootstrap.enable.popovers.everywhere.js" />
+    <None Remove="wwwroot\libs\bootstrap\js\bootstrap.enable.tooltips.everywhere.js" />
+    <None Remove="wwwroot\libs\datatables.net-bs5\css\dataTables.bootstrap5.css" />
+    <None Remove="wwwroot\libs\datatables.net-bs5\js\dataTables.bootstrap5.js" />
+    <None Remove="wwwroot\libs\datatables.net\js\jquery.dataTables.js" />
+    <None Remove="wwwroot\libs\jquery-form\jquery.form.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
+    <None Remove="wwwroot\libs\jquery-validation\jquery.validate.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_ar.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_ar.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_az.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_az.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_bg.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_bg.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_bn_BD.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_bn_BD.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_ca.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_ca.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_cs.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_cs.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_da.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_da.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_de.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_de.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_el.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_el.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_es.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_es.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_es_AR.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_es_AR.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_es_PE.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_es_PE.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_et.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_et.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_eu.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_eu.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_fa.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_fa.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_fi.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_fi.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_fr.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_fr.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_ge.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_ge.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_gl.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_gl.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_he.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_he.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_hr.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_hr.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_hu.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_hu.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_hy_AM.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_hy_AM.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_id.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_id.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_is.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_is.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_it.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_it.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_ja.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_ja.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_ka.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_ka.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_kk.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_kk.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_ko.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_ko.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_lt.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_lt.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_lv.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_lv.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_mk.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_mk.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_my.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_my.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_nl.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_nl.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_no.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_no.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_pl.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_pl.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_pt_BR.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_pt_BR.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_pt_PT.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_pt_PT.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_ro.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_ro.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_ru.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_ru.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_sd.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_sd.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_si.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_si.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_sk.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_sk.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_sl.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_sl.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_sr.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_sr.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_sr_lat.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_sr_lat.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_sv.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_sv.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_th.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_th.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_tj.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_tj.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_tr.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_tr.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_uk.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_uk.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_ur.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_ur.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_vi.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_vi.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_zh.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_zh.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_zh_TW.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\messages_zh_TW.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\methods_de.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\methods_de.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\methods_es_CL.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\methods_es_CL.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\methods_fi.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\methods_fi.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\methods_it.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\methods_it.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\methods_nl.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\methods_nl.min.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\methods_pt.js" />
+    <None Remove="wwwroot\libs\jquery-validation\localization\methods_pt.min.js" />
+    <None Remove="wwwroot\libs\jquery\jquery.js" />
+    <None Remove="wwwroot\libs\lodash\lodash.min.js" />
+    <None Remove="wwwroot\libs\luxon\luxon.js" />
+    <None Remove="wwwroot\libs\luxon\luxon.js.map" />
+    <None Remove="wwwroot\libs\luxon\luxon.min.js" />
+    <None Remove="wwwroot\libs\luxon\luxon.min.js.map" />
+    <None Remove="wwwroot\libs\malihu-custom-scrollbar-plugin\jquery.mCustomScrollbar.concat.min.js" />
+    <None Remove="wwwroot\libs\malihu-custom-scrollbar-plugin\jquery.mCustomScrollbar.css" />
+    <None Remove="wwwroot\libs\malihu-custom-scrollbar-plugin\jquery.mCustomScrollbar.js" />
+    <None Remove="wwwroot\libs\malihu-custom-scrollbar-plugin\mCSB_buttons.png" />
+    <None Remove="wwwroot\libs\malihu-custom-scrollbar-plugin\package.json" />
+    <None Remove="wwwroot\libs\malihu-custom-scrollbar-plugin\readme.md" />
+    <None Remove="wwwroot\libs\select2\css\select2.min.css" />
+    <None Remove="wwwroot\libs\select2\js\i18n\af.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\ar.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\az.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\bg.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\bn.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\bs.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\ca.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\cs.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\da.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\de.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\dsb.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\el.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\en.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\es.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\et.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\eu.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\fa.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\fi.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\fr.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\gl.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\he.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\hi.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\hr.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\hsb.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\hu.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\hy.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\id.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\is.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\it.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\ja.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\ka.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\km.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\ko.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\lt.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\lv.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\mk.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\ms.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\nb.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\ne.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\nl.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\pl.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\ps.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\pt-BR.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\pt.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\ro.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\ru.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\sk.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\sl.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\sq.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\sr-Cyrl.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\sr.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\sv.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\th.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\tk.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\tr.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\uk.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\vi.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\zh-CN.js" />
+    <None Remove="wwwroot\libs\select2\js\i18n\zh-TW.js" />
+    <None Remove="wwwroot\libs\select2\js\select2.full.min.js" />
+    <None Remove="wwwroot\libs\select2\js\select2.min.js" />
+    <None Remove="wwwroot\libs\sweetalert2\sweetalert2.all.js" />
+    <None Remove="wwwroot\libs\sweetalert2\sweetalert2.all.min.js" />
+    <None Remove="wwwroot\libs\sweetalert2\sweetalert2.css" />
+    <None Remove="wwwroot\libs\sweetalert2\sweetalert2.js" />
+    <None Remove="wwwroot\libs\sweetalert2\sweetalert2.min.css" />
+    <None Remove="wwwroot\libs\sweetalert2\sweetalert2.min.js" />
+    <None Remove="wwwroot\libs\timeago\jquery.timeago.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.af.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.am.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.ar.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.az-short.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.az.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.be.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.bg.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.bs.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.ca.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.cs.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.cy.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.da.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.de-short.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.de.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.dv.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.el.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.en-short.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.en.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.es-short.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.es.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.et.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.eu.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.fa-short.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.fa.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.fi.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.fr-short.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.fr.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.gl.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.he.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.hr.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.hu.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.hy.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.id.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.is.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.it-short.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.it.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.ja.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.jv.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.ko.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.ky.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.lt.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.lv.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.mk.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.nl.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.no.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.pl.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.pt-br-short.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.pt-br.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.pt-short.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.pt.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.ro.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.rs.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.ru.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.rw.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.si.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.sk.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.sl.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.sq.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.sr.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.sv.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.th.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.tr-short.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.tr.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.uk.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.ur.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.uz.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.vi.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.zh-CN.js" />
+    <None Remove="wwwroot\libs\timeago\locales\jquery.timeago.zh-TW.js" />
+    <None Remove="wwwroot\libs\timeago\locales\README.md" />
+    <None Remove="wwwroot\libs\toastr\toastr.css" />
+    <None Remove="wwwroot\libs\toastr\toastr.js.map" />
+    <None Remove="wwwroot\libs\toastr\toastr.min.css" />
+    <None Remove="wwwroot\libs\toastr\toastr.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Pages\Customers.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Pages\Index.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Pages\_ViewImports.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\global-styles.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\@fortawesome\fontawesome-free\css\all.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\@fortawesome\fontawesome-free\css\v4-shims.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\@fortawesome\fontawesome-free\webfonts\fa-brands-400.eot">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\@fortawesome\fontawesome-free\webfonts\fa-brands-400.svg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\@fortawesome\fontawesome-free\webfonts\fa-brands-400.ttf">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\@fortawesome\fontawesome-free\webfonts\fa-brands-400.woff">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\@fortawesome\fontawesome-free\webfonts\fa-brands-400.woff2">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\@fortawesome\fontawesome-free\webfonts\fa-regular-400.eot">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\@fortawesome\fontawesome-free\webfonts\fa-regular-400.svg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\@fortawesome\fontawesome-free\webfonts\fa-regular-400.ttf">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\@fortawesome\fontawesome-free\webfonts\fa-regular-400.woff">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\@fortawesome\fontawesome-free\webfonts\fa-regular-400.woff2">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\@fortawesome\fontawesome-free\webfonts\fa-solid-900.eot">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\@fortawesome\fontawesome-free\webfonts\fa-solid-900.svg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\@fortawesome\fontawesome-free\webfonts\fa-solid-900.ttf">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\@fortawesome\fontawesome-free\webfonts\fa-solid-900.woff">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\@fortawesome\fontawesome-free\webfonts\fa-solid-900.woff2">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\abp\core\abp.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\abp\core\abp.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\abp\jquery\abp.jquery.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\abp\luxon\abp.luxon.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\abp\utils\abp-utils.umd.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\abp\utils\abp-utils.umd.js.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\abp\utils\abp-utils.umd.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\abp\utils\abp-utils.umd.min.js.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\bootstrap-datepicker.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\bootstrap-datepicker.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\bootstrap-datepicker.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker-en-CA.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.ar-tn.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.ar.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.az.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.bg.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.bm.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.bn.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.br.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.bs.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.ca.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.cs.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.cy.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.da.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.de.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.el.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.en-AU.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.en-CA.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.en-GB.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.en-IE.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.en-NZ.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.en-ZA.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.eo.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.es.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.et.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.eu.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.fa.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.fi.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.fo.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.fr-CH.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.fr.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.gl.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.he.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.hi.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.hr.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.hu.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.hy.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.id.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.is.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.it-CH.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.it.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.ja.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.ka.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.kh.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.kk.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.km.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.ko.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.kr.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.lt.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.lv.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.me.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.mk.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.mn.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.ms.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.nl-BE.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.nl.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.no.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.oc.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.pl.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.pt-BR.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.pt.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.ro.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.rs-latin.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.rs.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.ru.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.si.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.sk.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.sl.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.sq.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.sr-latin.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.sr.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.sv.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.sw.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.ta.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.tg.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.th.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.tk.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.tr.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.uk.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.uz-cyrl.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.uz-latn.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.vi.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.zh-CN.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap-datepicker\locales\bootstrap-datepicker.zh-TW.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap\css\bootstrap.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap\css\bootstrap.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap\css\bootstrap.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap\css\bootstrap.min.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap\css\bootstrap.rtl.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap\css\bootstrap.rtl.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap\css\bootstrap.rtl.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap\css\bootstrap.rtl.min.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap\js\bootstrap.bundle.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap\js\bootstrap.bundle.js.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap\js\bootstrap.bundle.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap\js\bootstrap.bundle.min.js.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap\js\bootstrap.enable.popovers.everywhere.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\bootstrap\js\bootstrap.enable.tooltips.everywhere.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\datatables.net-bs5\css\dataTables.bootstrap5.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\datatables.net-bs5\js\dataTables.bootstrap5.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\datatables.net\js\jquery.dataTables.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-form\jquery.form.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\jquery.validate.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_ar.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_ar.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_az.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_az.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_bg.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_bg.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_bn_BD.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_bn_BD.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_ca.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_ca.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_cs.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_cs.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_da.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_da.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_de.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_de.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_el.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_el.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_es.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_es.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_es_AR.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_es_AR.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_es_PE.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_es_PE.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_et.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_et.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_eu.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_eu.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_fa.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_fa.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_fi.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_fi.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_fr.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_fr.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_ge.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_ge.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_gl.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_gl.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_he.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_he.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_hr.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_hr.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_hu.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_hu.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_hy_AM.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_hy_AM.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_id.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_id.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_is.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_is.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_it.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_it.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_ja.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_ja.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_ka.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_ka.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_kk.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_kk.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_ko.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_ko.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_lt.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_lt.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_lv.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_lv.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_mk.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_mk.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_my.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_my.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_nl.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_nl.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_no.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_no.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_pl.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_pl.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_pt_BR.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_pt_BR.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_pt_PT.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_pt_PT.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_ro.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_ro.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_ru.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_ru.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_sd.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_sd.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_si.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_si.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_sk.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_sk.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_sl.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_sl.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_sr.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_sr.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_sr_lat.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_sr_lat.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_sv.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_sv.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_th.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_th.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_tj.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_tj.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_tr.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_tr.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_uk.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_uk.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_ur.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_ur.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_vi.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_vi.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_zh.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_zh.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_zh_TW.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\messages_zh_TW.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\methods_de.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\methods_de.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\methods_es_CL.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\methods_es_CL.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\methods_fi.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\methods_fi.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\methods_it.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\methods_it.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\methods_nl.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\methods_nl.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\methods_pt.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery-validation\localization\methods_pt.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\jquery\jquery.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\lodash\lodash.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\luxon\luxon.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\luxon\luxon.js.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\luxon\luxon.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\luxon\luxon.min.js.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\malihu-custom-scrollbar-plugin\jquery.mCustomScrollbar.concat.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\malihu-custom-scrollbar-plugin\jquery.mCustomScrollbar.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\malihu-custom-scrollbar-plugin\jquery.mCustomScrollbar.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\malihu-custom-scrollbar-plugin\mCSB_buttons.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\malihu-custom-scrollbar-plugin\package.json">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\malihu-custom-scrollbar-plugin\readme.md">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\css\select2.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\af.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\ar.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\az.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\bg.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\bn.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\bs.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\ca.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\cs.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\da.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\de.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\dsb.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\el.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\en.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\es.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\et.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\eu.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\fa.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\fi.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\fr.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\gl.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\he.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\hi.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\hr.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\hsb.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\hu.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\hy.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\id.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\is.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\it.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\ja.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\ka.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\km.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\ko.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\lt.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\lv.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\mk.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\ms.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\nb.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\ne.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\nl.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\pl.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\ps.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\pt-BR.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\pt.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\ro.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\ru.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\sk.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\sl.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\sq.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\sr-Cyrl.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\sr.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\sv.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\th.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\tk.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\tr.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\uk.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\vi.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\zh-CN.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\i18n\zh-TW.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\select2.full.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\select2\js\select2.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\sweetalert2\sweetalert2.all.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\sweetalert2\sweetalert2.all.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\sweetalert2\sweetalert2.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\sweetalert2\sweetalert2.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\sweetalert2\sweetalert2.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\sweetalert2\sweetalert2.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\jquery.timeago.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.af.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.am.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.ar.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.az-short.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.az.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.be.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.bg.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.bs.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.ca.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.cs.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.cy.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.da.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.de-short.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.de.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.dv.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.el.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.en-short.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.en.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.es-short.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.es.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.et.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.eu.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.fa-short.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.fa.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.fi.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.fr-short.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.fr.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.gl.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.he.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.hr.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.hu.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.hy.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.id.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.is.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.it-short.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.it.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.ja.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.jv.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.ko.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.ky.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.lt.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.lv.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.mk.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.nl.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.no.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.pl.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.pt-br-short.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.pt-br.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.pt-short.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.pt.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.ro.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.rs.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.ru.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.rw.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.si.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.sk.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.sl.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.sq.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.sr.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.sv.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.th.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.tr-short.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.tr.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.uk.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.ur.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.uz.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.vi.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.zh-CN.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\jquery.timeago.zh-TW.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\timeago\locales\README.md">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\toastr\toastr.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\toastr\toastr.js.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\toastr\toastr.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\libs\toastr\toastr.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\ECommerce\ar.json" />
+    <EmbeddedResource Include="Localization\ECommerce\cs.json" />
+    <EmbeddedResource Include="Localization\ECommerce\de-DE.json" />
+    <EmbeddedResource Include="Localization\ECommerce\en-GB.json" />
+    <EmbeddedResource Include="Localization\ECommerce\en.json" />
+    <EmbeddedResource Include="Localization\ECommerce\es.json" />
+    <EmbeddedResource Include="Localization\ECommerce\fi.json" />
+    <EmbeddedResource Include="Localization\ECommerce\fr.json" />
+    <EmbeddedResource Include="Localization\ECommerce\hi.json" />
+    <EmbeddedResource Include="Localization\ECommerce\hu.json" />
+    <EmbeddedResource Include="Localization\ECommerce\is.json" />
+    <EmbeddedResource Include="Localization\ECommerce\it.json" />
+    <EmbeddedResource Include="Localization\ECommerce\nl.json" />
+    <EmbeddedResource Include="Localization\ECommerce\pl-PL.json" />
+    <EmbeddedResource Include="Localization\ECommerce\pt-BR.json" />
+    <EmbeddedResource Include="Localization\ECommerce\ro-RO.json" />
+    <EmbeddedResource Include="Localization\ECommerce\ru.json" />
+    <EmbeddedResource Include="Localization\ECommerce\sk.json" />
+    <EmbeddedResource Include="Localization\ECommerce\sl.json" />
+    <EmbeddedResource Include="Localization\ECommerce\tr.json" />
+    <EmbeddedResource Include="Localization\ECommerce\vi.json" />
+    <EmbeddedResource Include="Localization\ECommerce\zh-Hans.json" />
+    <EmbeddedResource Include="Localization\ECommerce\zh-Hant.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Pages\Index.cshtml.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Pages\Index.cshtml.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

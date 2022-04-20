@@ -83,11 +83,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Remove="Localization\ECommerce\*.json" />
-    <EmbeddedResource Include="Localization\ECommerce\*.json" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Remove="Logs\**" />
     <Content Remove="Logs\**" />
     <EmbeddedResource Remove="Logs\**" />
@@ -95,16 +90,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ECommerce.Contracts\ECommerce.Contracts.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="Pages\**\*.js">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Pages\**\*.css">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <ProjectReference Include="..\ECommerce.Contracts\ECommerce.Application.Contracts.csproj" />
   </ItemGroup>
 
 </Project>
