@@ -2,7 +2,7 @@
 {
     public class CustomerService
     {
-        internal object GetListAsync()
+        public object GetListAsync()
         {
             throw new NotImplementedException();
         }
