@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>ECommerce.Customers</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />
+    <PackageReference Include="Mongo2Go" Version="3.1.3" />
+    <ProjectReference Include="..\..\src\ECommerce.Customers.MongoDB\ECommerce.Customers.MongoDB.csproj" />
+    <ProjectReference Include="..\ECommerce.Customers.TestBase\ECommerce.Customers.TestBase.csproj" />
+  </ItemGroup>
+
+</Project>

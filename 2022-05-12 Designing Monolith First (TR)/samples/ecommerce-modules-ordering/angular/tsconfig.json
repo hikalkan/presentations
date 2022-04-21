@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.prod.json",
+  "compilerOptions": {
+    "paths": {
+      "@e-commerce/ordering": [
+        "projects/ordering/src/public-api.ts"
+      ],
+      "@e-commerce/ordering/config": [
+        "projects/ordering/config/src/public-api.ts"
+      ],
+      "@proxy": ["projects/ordering/src/lib/proxy/index.ts"],
+      "@proxy/*": ["projects/ordering/src/lib/proxy/*"]
+    }
+  }
+}

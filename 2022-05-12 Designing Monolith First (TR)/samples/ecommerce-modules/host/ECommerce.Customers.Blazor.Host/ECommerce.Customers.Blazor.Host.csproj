@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Blazorise.Bootstrap5" Version="1.0.2" />
+    <PackageReference Include="Blazorise.Icons.FontAwesome" Version="1.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.Autofac.WebAssembly" Version="5.2.1" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Components.WebAssembly.BasicTheme" Version="5.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.Account.Application.Contracts" Version="5.2.1" />
+    <PackageReference Include="Volo.Abp.Identity.Blazor.WebAssembly" Version="5.2.1" />
+    <PackageReference Include="Volo.Abp.TenantManagement.Blazor.WebAssembly" Version="5.2.1" />
+    <PackageReference Include="Volo.Abp.SettingManagement.Blazor.WebAssembly" Version="5.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ECommerce.Customers.Host.Shared\ECommerce.Customers.Host.Shared.csproj" />
+    <ProjectReference Include="..\..\src\ECommerce.Customers.Blazor.WebAssembly\ECommerce.Customers.Blazor.WebAssembly.csproj" />
+  </ItemGroup>
+
+</Project>

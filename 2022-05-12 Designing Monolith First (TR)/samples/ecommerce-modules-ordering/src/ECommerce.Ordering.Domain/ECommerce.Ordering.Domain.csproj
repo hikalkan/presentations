@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>ECommerce.Ordering</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.Ddd.Domain" Version="5.2.1" />
+    <ProjectReference Include="..\ECommerce.Ordering.Domain.Shared\ECommerce.Ordering.Domain.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

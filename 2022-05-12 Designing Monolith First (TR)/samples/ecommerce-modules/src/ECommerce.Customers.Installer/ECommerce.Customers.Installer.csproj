@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="..\..\common.props" />
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <GenerateEmbeddedFilesManifest>true</GenerateEmbeddedFilesManifest>
+        <RootNamespace>ECommerce.Customers</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Volo.Abp.Studio.ModuleInstaller" Version="5.2.1" />
+        <PackageReference Include="Volo.Abp.VirtualFileSystem" Version="5.2.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="..\..\ECommerce.Customers.abpmdl.json" />
+      <EmbeddedResource Include="..\..\ECommerce.Customers.abpmdl.json" />
+    </ItemGroup>
+
+</Project>

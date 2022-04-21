@@ -1,0 +1,71 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>ECommerce.Customers</RootNamespace>
+    <PreserveCompilationReferences>true</PreserveCompilationReferences>
+    <UserSecretsId>ECommerce.Customers-c2d31439-b723-48e2-b061-5ebd7aeb6010</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Serilog.AspNetCore" Version="4.1.0" />
+    <PackageReference Include="Serilog.Sinks.Async" Version="1.5.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Volo.Abp.Autofac" Version="5.2.1" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic" Version="5.2.1" />
+    <PackageReference Include="Volo.Abp.EntityFrameworkCore.SqlServer" Version="5.2.1" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Serilog" Version="5.2.1" />
+    <PackageReference Include="Volo.Abp.Swashbuckle" Version="5.2.1" />
+    <PackageReference Include="Volo.Abp.AuditLogging.EntityFrameworkCore" Version="5.2.1" />
+    <PackageReference Include="Volo.Abp.Account.Web" Version="5.2.1" />
+    <PackageReference Include="Volo.Abp.Account.Application" Version="5.2.1" />
+    <PackageReference Include="Volo.Abp.Account.HttpApi" Version="5.2.1" />
+    <PackageReference Include="Volo.Abp.SettingManagement.EntityFrameworkCore" Version="5.2.1" />
+    <PackageReference Include="Volo.Abp.PermissionManagement.Application" Version="5.2.1" />
+    <PackageReference Include="Volo.Abp.PermissionManagement.HttpApi" Version="5.2.1" />
+    <PackageReference Include="Volo.Abp.PermissionManagement.EntityFrameworkCore" Version="5.2.1" />
+    <PackageReference Include="Volo.Abp.Identity.Application" Version="5.2.1" />
+    <PackageReference Include="Volo.Abp.Identity.HttpApi" Version="5.2.1" />
+    <PackageReference Include="Volo.Abp.Identity.Web" Version="5.2.1" />
+    <PackageReference Include="Volo.Abp.Identity.EntityFrameworkCore" Version="5.2.1" />
+    <PackageReference Include="Volo.Abp.PermissionManagement.Domain.Identity" Version="5.2.1" />
+    <PackageReference Include="Volo.Abp.FeatureManagement.EntityFrameworkCore" Version="5.2.1" />
+    <PackageReference Include="Volo.Abp.FeatureManagement.Application" Version="5.2.1" />
+    <PackageReference Include="Volo.Abp.FeatureManagement.HttpApi" Version="5.2.1" />
+    <PackageReference Include="Volo.Abp.FeatureManagement.Web" Version="5.2.1" />
+    <PackageReference Include="Volo.Abp.TenantManagement.Application" Version="5.2.1" />
+    <PackageReference Include="Volo.Abp.TenantManagement.HttpApi" Version="5.2.1" />
+    <PackageReference Include="Volo.Abp.TenantManagement.Web" Version="5.2.1" />
+    <PackageReference Include="Volo.Abp.TenantManagement.EntityFrameworkCore" Version="5.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\ECommerce.Customers.Application\ECommerce.Customers.Application.csproj" />
+    <ProjectReference Include="..\..\src\ECommerce.Customers.HttpApi\ECommerce.Customers.HttpApi.csproj" />
+    <ProjectReference Include="..\..\src\ECommerce.Customers.EntityFrameworkCore\ECommerce.Customers.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\src\ECommerce.Customers.Web\ECommerce.Customers.Web.csproj" />
+    <ProjectReference Include="..\ECommerce.Customers.Host.Shared\ECommerce.Customers.Host.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Logs\**" />
+    <Content Remove="Logs\**" />
+    <EmbeddedResource Remove="Logs\**" />
+    <None Remove="Logs\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Pages\**\*.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Pages\**\*.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

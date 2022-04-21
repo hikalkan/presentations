@@ -1,0 +1,111 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {},
+      "host": {}
+    }
+  },
+  "packages": {
+    "ECommerce.Customers.Domain.Shared": {
+      "path": "src/ECommerce.Customers.Domain.Shared/ECommerce.Customers.Domain.Shared.abppkg.json",
+      "folder": "src"
+    },
+    "ECommerce.Customers.Domain": {
+      "path": "src/ECommerce.Customers.Domain/ECommerce.Customers.Domain.abppkg.json",
+      "folder": "src"
+    },
+    "ECommerce.Customers.Application.Contracts": {
+      "path": "src/ECommerce.Customers.Application.Contracts/ECommerce.Customers.Application.Contracts.abppkg.json",
+      "folder": "src"
+    },
+    "ECommerce.Customers.Application": {
+      "path": "src/ECommerce.Customers.Application/ECommerce.Customers.Application.abppkg.json",
+      "folder": "src"
+    },
+    "ECommerce.Customers.EntityFrameworkCore": {
+      "path": "src/ECommerce.Customers.EntityFrameworkCore/ECommerce.Customers.EntityFrameworkCore.abppkg.json",
+      "folder": "src"
+    },
+    "ECommerce.Customers.MongoDB": {
+      "path": "src/ECommerce.Customers.MongoDB/ECommerce.Customers.MongoDB.abppkg.json",
+      "folder": "src"
+    },
+    "ECommerce.Customers.HttpApi": {
+      "path": "src/ECommerce.Customers.HttpApi/ECommerce.Customers.HttpApi.abppkg.json",
+      "folder": "src"
+    },
+    "ECommerce.Customers.HttpApi.Client": {
+      "path": "src/ECommerce.Customers.HttpApi.Client/ECommerce.Customers.HttpApi.Client.abppkg.json",
+      "folder": "src"
+    },
+    "ECommerce.Customers.TestBase": {
+      "path": "test/ECommerce.Customers.TestBase/ECommerce.Customers.TestBase.abppkg.json",
+      "folder": "test"
+    },
+    "ECommerce.Customers.EntityFrameworkCore.Tests": {
+      "path": "test/ECommerce.Customers.EntityFrameworkCore.Tests/ECommerce.Customers.EntityFrameworkCore.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "ECommerce.Customers.MongoDB.Tests": {
+      "path": "test/ECommerce.Customers.MongoDB.Tests/ECommerce.Customers.MongoDB.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "ECommerce.Customers.Domain.Tests": {
+      "path": "test/ECommerce.Customers.Domain.Tests/ECommerce.Customers.Domain.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "ECommerce.Customers.Application.Tests": {
+      "path": "test/ECommerce.Customers.Application.Tests/ECommerce.Customers.Application.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "ECommerce.Customers.HttpApi.Host": {
+      "path": "host/ECommerce.Customers.HttpApi.Host/ECommerce.Customers.HttpApi.Host.abppkg.json",
+      "folder": "host"
+    },
+    "ECommerce.Customers.Web": {
+      "path": "src/ECommerce.Customers.Web/ECommerce.Customers.Web.abppkg.json",
+      "folder": "src"
+    },
+    "ECommerce.Customers.HttpApi.Client.ConsoleTestApp": {
+      "path": "test/ECommerce.Customers.HttpApi.Client.ConsoleTestApp/ECommerce.Customers.HttpApi.Client.ConsoleTestApp.abppkg.json",
+      "folder": "test"
+    },
+    "ECommerce.Customers.Web.Host": {
+      "path": "host/ECommerce.Customers.Web.Host/ECommerce.Customers.Web.Host.abppkg.json",
+      "folder": "host"
+    },
+    "ECommerce.Customers.IdentityServer": {
+      "path": "host/ECommerce.Customers.IdentityServer/ECommerce.Customers.IdentityServer.abppkg.json",
+      "folder": "host"
+    },
+    "ECommerce.Customers.Host.Shared": {
+      "path": "host/ECommerce.Customers.Host.Shared/ECommerce.Customers.Host.Shared.abppkg.json",
+      "folder": "host"
+    },
+    "ECommerce.Customers.Web.Unified": {
+      "path": "host/ECommerce.Customers.Web.Unified/ECommerce.Customers.Web.Unified.abppkg.json",
+      "folder": "host"
+    },
+    "ECommerce.Customers.Blazor": {
+      "path": "src/ECommerce.Customers.Blazor/ECommerce.Customers.Blazor.abppkg.json",
+      "folder": "src"
+    },
+    "ECommerce.Customers.Blazor.Host": {
+      "path": "host/ECommerce.Customers.Blazor.Host/ECommerce.Customers.Blazor.Host.abppkg.json",
+      "folder": "host"
+    },
+    "ECommerce.Customers.Blazor.Server": {
+      "path": "src/ECommerce.Customers.Blazor.Server/ECommerce.Customers.Blazor.Server.abppkg.json",
+      "folder": "src"
+    },
+    "ECommerce.Customers.Blazor.WebAssembly": {
+      "path": "src/ECommerce.Customers.Blazor.WebAssembly/ECommerce.Customers.Blazor.WebAssembly.abppkg.json",
+      "folder": "src"
+    },
+    "ECommerce.Customers.Blazor.Server.Host": {
+      "path": "host/ECommerce.Customers.Blazor.Server.Host/ECommerce.Customers.Blazor.Server.Host.abppkg.json",
+      "folder": "host"
+    }
+  }
+}

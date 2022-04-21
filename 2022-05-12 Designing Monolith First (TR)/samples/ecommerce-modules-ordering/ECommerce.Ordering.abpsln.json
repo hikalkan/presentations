@@ -1,0 +1,7 @@
+{
+  "modules": {
+    "ECommerce.Ordering": {
+      "path": "ECommerce.Ordering.abpmdl.json"
+    }
+  }
+}

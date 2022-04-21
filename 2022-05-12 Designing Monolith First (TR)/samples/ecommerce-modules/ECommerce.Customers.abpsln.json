@@ -1,0 +1,7 @@
+{
+  "modules": {
+    "ECommerce.Customers": {
+      "path": "ECommerce.Customers.abpmdl.json"
+    }
+  }
+}
