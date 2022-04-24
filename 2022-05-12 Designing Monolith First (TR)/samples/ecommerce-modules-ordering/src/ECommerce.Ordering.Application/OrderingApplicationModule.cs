@@ -2,6 +2,8 @@
 using Volo.Abp.AutoMapper;
 using Volo.Abp.Modularity;
 using Volo.Abp.Application;
+using ECommerce.Customers;
+using Volo.Abp.Caching;
 
 namespace ECommerce.Ordering;
 
@@ -9,7 +11,9 @@ namespace ECommerce.Ordering;
     typeof(OrderingDomainModule),
     typeof(OrderingApplicationContractsModule),
     typeof(AbpDddApplicationModule),
-    typeof(AbpAutoMapperModule)
+    typeof(AbpAutoMapperModule),
+    typeof(CustomersApplicationContractsModule),
+    typeof(AbpCachingModule)
     )]
 public class OrderingApplicationModule : AbpModule
 {
