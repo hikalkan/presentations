@@ -11,12 +11,12 @@ public class CustomerChangeHandler :
     IDistributedEventHandler<EntityDeletedEto<CustomerEto>>,
     ITransientDependency
 {
-    public Task HandleEventAsync(EntityUpdatedEto<CustomerEto> eventData)
+    public async Task HandleEventAsync(EntityUpdatedEto<CustomerEto> eventData)
     {
         // TODO: Implement customer update logic
     }
 
-    public Task HandleEventAsync(EntityDeletedEto<CustomerEto> eventData)
+    public async Task HandleEventAsync(EntityDeletedEto<CustomerEto> eventData)
     {
         // TODO: Implement customer deletion logic
     }
