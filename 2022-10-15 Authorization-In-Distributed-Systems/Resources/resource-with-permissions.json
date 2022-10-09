@@ -1,0 +1,17 @@
+
+  {
+    "totalCount": "2",
+    "items": [
+      {
+        "ClientId": "AbpCommercialDemo_App",
+        "CreationTime": "2022-10-15 14:08:42",
+        "_Permissions": ["Edit", "ManagePermissions", "Delete"]
+      },
+      {
+        "ClientId": "AbpCommercialDemo_Web",
+        "CreationTime": "2022-10-15 14:11:33",
+        "_Permissions": ["Edit"]
+      }
+    ]    
+  }
+
