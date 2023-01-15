@@ -19,18 +19,27 @@ public class BookStoreFeatureDefinitionProvider : FeatureDefinitionProvider
 
 //********************************************************************//
 
+displayName: LocalizableString.Create<BookStoreResource>("StockManagement"),
+
+//********************************************************************//
+
 using System;
 using System.Threading.Tasks;
 using Volo.Abp.Application.Services;
 using Volo.Abp.Features;
 
-namespace Acme.BookStore.Books;
+namespace Acme.BookStore;
 
-[RequiresFeature("BookStore.StockManagement")]
-public class BookStockAppService : ApplicationService, IBookStockAppService
+public class BookStockAppService : ApplicationService
 {
     public async Task<int> GetStockCountAsync(Guid bookId)
     {
+        // TODO: ...
         return 42;
+    }
+    
+    public async Task AddStockAsync(Guid bookId, int amount)
+    {
+        // TODO: ...
     }
 }
