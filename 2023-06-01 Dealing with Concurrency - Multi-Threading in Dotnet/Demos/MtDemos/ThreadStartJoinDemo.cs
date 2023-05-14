@@ -19,7 +19,7 @@
 
         public static void RunThread()
         {
-            for (int i = 0; i < 10; i++)
+            for (int i = 1; i <= 10; i++)
             {
                 Logger.Log(i.ToString());
                 Thread.Sleep(100);

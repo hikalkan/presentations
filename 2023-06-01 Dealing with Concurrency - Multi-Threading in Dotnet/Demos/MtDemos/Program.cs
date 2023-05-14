@@ -5,7 +5,8 @@
         static void Main(string[] args)
         {
             //ThreadStartJoinDemo.Run();
-            MultipleThreadStartJoinDemo.Run();
+            //MultipleThreadStartJoinDemo.Run();
+            ParameterizedMultipleThreadStartJoinDemo.Run();
         }
     }
 }
