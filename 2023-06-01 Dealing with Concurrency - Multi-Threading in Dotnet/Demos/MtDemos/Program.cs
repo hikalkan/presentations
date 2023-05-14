@@ -4,7 +4,8 @@
     {
         static void Main(string[] args)
         {
-            ThreadStartStopDemo.Run();
+            //ThreadStartJoinDemo.Run();
+            MultipleThreadStartJoinDemo.Run();
         }
     }
 }

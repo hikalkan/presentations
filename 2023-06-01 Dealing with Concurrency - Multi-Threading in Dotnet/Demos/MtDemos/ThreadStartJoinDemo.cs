@@ -1,6 +1,6 @@
 ﻿namespace MtDemos
 {
-    public static class ThreadStartStopDemo
+    public static class ThreadStartJoinDemo
     {
         public static void Run()
         {
