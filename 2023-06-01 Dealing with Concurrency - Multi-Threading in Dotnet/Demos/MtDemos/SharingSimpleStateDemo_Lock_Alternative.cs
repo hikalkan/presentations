@@ -1,8 +1,9 @@
 ﻿namespace MtDemos
 {
-    public static class SharingSimpleStateDemo_Interlocked
+    public static class SharingSimpleStateDemo_Lock_Alternative
     {
         private static int _counter = 0;
+        private static object _syncObj = new();
 
         public static void Run()
         {
@@ -23,9 +24,12 @@
 
         private static void RunThread()
         {
-            for (int i = 1; i <= 1_000_000; i++)
+            lock (_syncObj)
             {
-                Interlocked.Increment(ref _counter);
+                for (int i = 1; i <= 1_000_000; i++)
+                {
+                    _counter++;
+                }
             }
         }
     }

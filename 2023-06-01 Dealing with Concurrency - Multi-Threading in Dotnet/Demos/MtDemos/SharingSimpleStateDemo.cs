@@ -21,7 +21,7 @@
             Logger.Log("Counter: " + _counter.ToString("0,000,000"));
         }
 
-        public static void RunThread()
+        private static void RunThread()
         {
             for (int i = 1; i <= 1_000_000; i++)
             {

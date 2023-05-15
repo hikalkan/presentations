@@ -7,8 +7,10 @@
             //ThreadStartJoinDemo.Run();
             //MultipleThreadStartJoinDemo.Run();
             //ParameterizedMultipleThreadStartJoinDemo.Run();
-            SharingSimpleStateDemo.Run();
-            SharingSimpleStateDemo_Interlocked.Run();
+            //SharingSimpleStateDemo.Run();
+            //SharingSimpleStateDemo_Interlocked.Run();
+            //SharingSimpleStateDemo_Lock.Run();
+            SharingSimpleStateDemo_Lock_Alternative.Run();
         }
     }
 }

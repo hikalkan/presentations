@@ -20,7 +20,7 @@
             Logger.Log("Threads stopped, exiting...");
         }
 
-        public static void RunThread()
+        private static void RunThread()
         {
             for (int i = 1; i <= 10; i++)
             {

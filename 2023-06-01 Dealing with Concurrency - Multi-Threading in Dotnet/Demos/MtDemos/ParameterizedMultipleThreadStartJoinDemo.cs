@@ -20,7 +20,7 @@
             Logger.Log("Threads stopped, exiting...");
         }
 
-        public static void RunThread(object? arg)
+        private static void RunThread(object? arg)
         {
             var count = Convert.ToInt32(arg);
             for (int i = 1; i <= count; i++)
