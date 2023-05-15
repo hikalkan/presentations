@@ -15,7 +15,9 @@
             //SharingSimpleStateDemo_Lock.Run();
             //SharingSimpleStateDemo_Lock_Alternative.Run();
 
-            SharingSimpleStateDemo_Monitor.Run();
+            //SharingSimpleStateDemo_Monitor.Run();
+
+            ProducerConsumerDemo.Run();
         }
     }
 }
