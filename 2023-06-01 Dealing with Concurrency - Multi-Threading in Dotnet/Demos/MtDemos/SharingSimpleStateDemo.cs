@@ -17,7 +17,7 @@
             thread1.Join();
             thread2.Join();
 
-            Logger.Log("Thread stopped, exiting...");
+            Logger.Log("Threads stopped, exiting...");
             Logger.Log("Counter: " + _counter.ToString("0,000,000"));
         }
 
