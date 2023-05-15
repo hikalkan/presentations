@@ -2,7 +2,7 @@
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             //ThreadStartJoinDemo.Run();
 
@@ -17,7 +17,10 @@
 
             //SharingSimpleStateDemo_Monitor.Run();
 
-            ProducerConsumerDemo.Run();
+            //ProducerConsumerDemo.Run();
+
+            //AsyncCodeDemo.Run();
+            SemaphoreDemo.Run();
         }
     }
 }
