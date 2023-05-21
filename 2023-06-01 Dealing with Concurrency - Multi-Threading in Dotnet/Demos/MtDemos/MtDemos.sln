@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MtDemos", "MtDemos.csproj", "{FB57BA1B-4995-4C4F-8327-475899743B05}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MtDemos", "MtDemos\MtDemos.csproj", "{FB57BA1B-4995-4C4F-8327-475899743B05}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "interprocess", "interprocess", "{EF699CAB-F6D6-4F60-8A9C-8AB6CE98D01E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MutexDemo", "MutexDemo\MutexDemo.csproj", "{FEBCC3C4-8B23-40A4-BCA4-FB60EDBD228B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,11 +19,18 @@ Global
 		{FB57BA1B-4995-4C4F-8327-475899743B05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB57BA1B-4995-4C4F-8327-475899743B05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB57BA1B-4995-4C4F-8327-475899743B05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEBCC3C4-8B23-40A4-BCA4-FB60EDBD228B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEBCC3C4-8B23-40A4-BCA4-FB60EDBD228B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEBCC3C4-8B23-40A4-BCA4-FB60EDBD228B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEBCC3C4-8B23-40A4-BCA4-FB60EDBD228B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {437F7085-95BB-46C3-A590-32D089FF6F7D}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FEBCC3C4-8B23-40A4-BCA4-FB60EDBD228B} = {EF699CAB-F6D6-4F60-8A9C-8AB6CE98D01E}
 	EndGlobalSection
 EndGlobal
