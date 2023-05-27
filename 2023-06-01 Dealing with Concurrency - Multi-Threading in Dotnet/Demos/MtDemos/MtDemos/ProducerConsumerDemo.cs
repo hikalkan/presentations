@@ -19,7 +19,7 @@
                 new Thread(RunProducer),
                 new Thread(RunProducer),
 
-                // 2 Consumer threads
+                // 3 Consumer threads
                 new Thread(RunConsumer),
                 new Thread(RunConsumer),
                 new Thread(RunConsumer),
