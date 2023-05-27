@@ -56,7 +56,7 @@
                     }
 
                     _queue.Enqueue(new WorkItem { Number = _nextNumber }); // Add an item to the queue
-                    Logger.Log($"Queued: {_nextNumber}");
+                    Logger.Log($"[PRODUCER] Queued: {_nextNumber}");
 
                     _nextNumber++;
 
@@ -64,7 +64,7 @@
                 }
             }
 
-            Logger.Log("Producer exits...");
+            Logger.Log("[PRODUCER] exits...");
         }
 
         public static void RunConsumer()
@@ -94,11 +94,11 @@
                 if (workItem != null)
                 {
                     Thread.Sleep(3000); // Simulate item processsing
-                    Logger.Log($"Processed: {workItem.Number}");
+                    Logger.Log($"[CONSUMER] Processed: {workItem.Number}");
                 }
             }
 
-            Logger.Log("Consumer exits...");
+            Logger.Log("[CONSUMER] exits...");
         }
     }
 
