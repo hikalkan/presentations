@@ -25,7 +25,7 @@
         {
             for (int i = 1; i <= 1_000_000; i++)
             {
-                _counter++;
+                _counter++; // counter = counter + 1
             }
         }
     }
