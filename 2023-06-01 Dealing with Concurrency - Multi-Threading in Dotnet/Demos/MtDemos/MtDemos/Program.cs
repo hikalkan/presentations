@@ -4,7 +4,7 @@
     {
         static async Task Main(string[] args)
         {
-            //ParameterizedMultipleThreadStartJoinDemo.Run();
+            ParameterizedMultipleThreadStartJoinDemo.Run();
 
             //SharingSimpleStateDemo.Run();
             //SharingSimpleStateDemo_Interlocked.Run();
