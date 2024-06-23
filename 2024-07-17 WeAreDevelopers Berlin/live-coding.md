@@ -55,9 +55,9 @@
   }
   ````
 
-## EF Core Mapping Database Operations
+## EF Core Mapping / Database Operations
 
-* Add the `Book` entity to the `BookStoreDbContext` class:
+* Add the `Book` entity to the `BookStoreDbContext` class (in the `EntityFrameworkCore` project):
   ````csharp
   public DbSet<Book> Books { get; set; }
   ````
@@ -77,3 +77,101 @@
   ````
 
 * Run the `DbMigrator` application again to update the database
+
+## Create the Application Service
+
+* Create `IBookAppService` in the `Application.Contracts` project (in the `Books` folder):
+
+  ````csharp
+  using System;
+  using Volo.Abp.Application.Dtos;
+  using Volo.Abp.Application.Services;
+  
+  namespace Acme.BookStore.Books;
+  
+  public interface IBookAppService :
+      ICrudAppService< //Defines CRUD methods
+          BookDto, //Used to show books
+          Guid, //Primary key of the book entity
+          PagedAndSortedResultRequestDto, //Used for paging/sorting
+          CreateUpdateBookDto> //Used to create/update a book
+  {
+  
+  }
+  ````
+
+* Create `BookAppService` in the `Application` project (in the `Books` folder):
+  ````csharp
+  using System;
+  using Volo.Abp.Application.Dtos;
+  using Volo.Abp.Application.Services;
+  using Volo.Abp.Domain.Repositories;
+  
+  namespace Acme.BookStore.Books;
+  
+  public class BookAppService :
+      CrudAppService<
+          Book, //The Book entity
+          BookDto, //Used to show books
+          Guid, //Primary key of the book entity
+          PagedAndSortedResultRequestDto, //Used for paging/sorting
+          CreateUpdateBookDto>, //Used to create/update a book
+      IBookAppService //implement the IBookAppService
+  {
+      public BookAppService(IRepository<Book, Guid> repository)
+          : base(repository)
+      {
+  
+      }
+  }
+  ````
+
+* Create `BookDto` in the `Application.Contracts` project (in the `Books` folder):
+  ````csharp
+  using System;
+  using Volo.Abp.Application.Dtos;
+  
+  namespace Acme.BookStore.Books;
+  
+  public class BookDto : AuditedEntityDto<Guid>
+  {
+      public string Name { get; set; }
+      public BookType Type { get; set; }
+      public DateTime PublishDate { get; set; }
+      public float Price { get; set; }
+  }
+  ````
+
+* Create `BookDto` in the `Application.Contracts` project (in the `Books` folder):
+  ````csharp
+  using System;
+  using System.ComponentModel.DataAnnotations;
+  
+  namespace Acme.BookStore.Books;
+  
+  public class CreateUpdateBookDto
+  {
+      [Required]
+      [StringLength(128)]
+      public string Name { get; set; } = string.Empty;
+  
+      [Required]
+      public BookType Type { get; set; } = BookType.Undefined;
+  
+      [Required]
+      [DataType(DataType.Date)]
+      public DateTime PublishDate { get; set; } = DateTime.Now;
+  
+      [Required]
+      public float Price { get; set; }
+  }
+  ````
+
+* Add the following mappings into `BookStoreApplicationAutoMapperProfile` class (in the `Application` project):
+
+  ````csharp
+  CreateMap<Book, BookDto>();
+  CreateMap<CreateUpdateBookDto, Book>();
+  ````
+
+* .
