@@ -561,4 +561,104 @@
 
 * Remove `Assert.ThrowsAsync` from `Should_Not_Create_A_Book_Without_Name` to see it throws exception and the test fails.
 
-...
+## Authorization: Adding Permissions
+
+* Change the `BookStorePermissions` class (in the `Application.Contracts` project) like that:
+  ````csharp
+  namespace Acme.BookStore.Permissions;
+  
+  public static class BookStorePermissions
+  {
+      public const string GroupName = "BookStore";
+      
+      public const string Books = GroupName + ".Books";
+      public const string Books_Create = GroupName + ".Books.Create";
+      public const string Books_Delete = GroupName + ".Books.Delete";
+  }
+  ````
+
+* Change the `BookStorePermissionDefinitionProvider` class (in the `Application.Contracts` project) like that:
+  ````csharp
+  using Volo.Abp.Authorization.Permissions;
+  using Volo.Abp.Localization;
+  
+  namespace Acme.BookStore.Permissions;
+  
+  public class BookStorePermissionDefinitionProvider : PermissionDefinitionProvider
+  {
+      public override void Define(IPermissionDefinitionContext context)
+      {
+          var myGroup = context.AddGroup(BookStorePermissions.GroupName);
+          
+          var booksPermission = myGroup.AddPermission(BookStorePermissions.Books, new FixedLocalizableString("Books page"));
+          booksPermission.AddChild(BookStorePermissions.Books_Create, new FixedLocalizableString("Create a new book"));
+          booksPermission.AddChild(BookStorePermissions.Books_Delete, new FixedLocalizableString("Delete books"));
+      }
+  }
+  ````
+
+* Show the permission management dialog: A new Books tab is automatically added.
+
+* Add the following lines to the `BookAppService` constructor:
+  ````csharp
+  GetPolicyName = BookStorePermissions.Books;
+  GetListPolicyName = BookStorePermissions.Books;
+  CreatePolicyName = BookStorePermissions.Books_Create;
+  DeletePolicyName = BookStorePermissions.Books_Delete;
+  ````
+
+* Add `RequirePermissions` extension method call on the `ApplicationMenuItem` definition:
+  ````csharp
+  context.Menu.AddItem(
+      new ApplicationMenuItem(
+          "BooksStore",
+          "Books",
+          url: "/Books",
+          icon: "fa fa-book"
+      ).RequirePermissions(BookStorePermissions.Books)
+  );
+  ````
+
+* Replace the `Index.cshtml` content with the following (to hide the Book Create button):
+  ````html
+  @page
+  @using Acme.BookStore.Permissions
+  @using Microsoft.AspNetCore.Authorization
+  @inject IAuthorizationService AuthorizationService
+  @model Acme.BookStore.Web.Pages.Books.Index
+  
+  @section scripts
+  {
+      <abp-script src="/Pages/Books/Index.cshtml.js" />
+  }
+  
+  <abp-card>
+      <abp-card-header>
+          <abp-row>
+              <abp-column size-md="_6">
+                  <abp-card-title>Books</abp-card-title>
+              </abp-column>
+              <abp-column size-md="_6" class="text-end">
+                  @if (await AuthorizationService.IsGrantedAsync(BookStorePermissions.Books_Create))
+                  {
+                      <abp-button id="NewBookButton"
+                                  text="New Book"
+                                  icon="plus"
+                                  button-type="Primary"/>
+                  }
+              </abp-column>
+          </abp-row>
+      </abp-card-header>
+      <abp-card-body>
+          <abp-table striped-rows="true" id="BooksTable"></abp-table>
+      </abp-card-body>
+  </abp-card>
+  ````
+
+* Add the following line into the Delete action definition in the `Index.cshtml.js` file:
+  ````js
+  visible: abp.auth.isGranted('BookStore.Books.Delete'),
+  ````
+
+
+
