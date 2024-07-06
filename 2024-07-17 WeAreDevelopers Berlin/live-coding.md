@@ -200,5 +200,112 @@
       });
   ````
 
+## Build the User Interface
+
+* Create a `Books` folder under the `Pages` folder, then create a new `Index` Razor Page under it:
+  ````html
+  @page
+  @model Acme.BookStore.Web.Pages.Books.Index
   
+  <h2>Books</h2>
+  ````
+
+* Add new menu item (inside the `BookStoreMenuContributor` class):
+  ````csharp
+  context.Menu.AddItem(
+      new ApplicationMenuItem(
+          "BooksStore",
+          "Books",
+          url: "/Books",
+          icon: "fa fa-book"
+      )
+  );
+  ````
+
+* Replace the `Index.cshtml` content with the following:
+  ````html
+  @page
+  @model Acme.BookStore.Web.Pages.Books.Index
+  
+  @section scripts
+  {
+      <abp-script src="/Pages/Books/Index.js" />
+  }
+  
+  <abp-card>
+      <abp-card-header>
+          <h2>Books</h2>
+      </abp-card-header>
+      <abp-card-body>
+          <abp-table striped-rows="true" id="BooksTable"></abp-table>
+      </abp-card-body>
+  </abp-card>
+  ````
+
+* Create `Index.cshtml.js` file with the following content:
+  ````js
+  $(function () {
+      var dataTable = $('#BooksTable').DataTable(
+          abp.libs.datatables.normalizeConfiguration({
+              serverSide: true,
+              paging: true,
+              order: [[1, "asc"]],
+              searching: false,
+              scrollX: true,
+              ajax: abp.libs.datatables.createAjax(acme.bookStore.books.book.getList),
+              columnDefs: [
+                  {
+                      title: 'Name',
+                      data: "name"
+                  },
+                  {
+                      title: 'Type',
+                      data: "type"
+                  },
+                  {
+                      title: 'Publish Date',
+                      data: "publishDate",
+                      render: function (data) {
+                          return luxon
+                              .DateTime
+                              .fromISO(data, {
+                                  locale: abp.localization.currentCulture.name
+                              }).toLocaleString();
+                      }
+                  },
+                  {
+                      title: 'Price',
+                      data: "price"
+                  },
+                  {
+                      title: 'Creation Time', data: "creationTime",
+                      render: function (data) {
+                          return luxon
+                              .DateTime
+                              .fromISO(data, {
+                                  locale: abp.localization.currentCulture.name
+                              }).toLocaleString(luxon.DateTime.DATETIME_SHORT);
+                      }
+                  }
+              ]
+          })
+      );
+  });
+  ````
+
+  
+
+* .
+
+
+
+### The Book List Page
+
+
+
+### Creating a new book
+
+
+
+### Deleting a book
 
