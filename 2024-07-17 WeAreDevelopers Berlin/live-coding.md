@@ -385,4 +385,32 @@
   });
   ````
 
+* Add the following definition to the `columnDefs` list, before the `Name` column in `Index.cshtml.js`:
+  ````js
+  {
+      title: 'Actions',
+      rowAction: {
+          items:
+              [
+                  {
+                      text: 'Delete',
+                      confirmMessage: function (data) {
+                          return 'Are you sure to delete the book: ' + data.record.name;
+                      },
+                      action: function (data) {
+                          acme.bookStore.books.book
+                              .delete(data.record.id)
+                              .then(function() {
+                                  abp.notify.info('Successfully deleted the book');
+                                  dataTable.ajax.reload();
+                              });
+                      }
+                  }
+              ]
+      }
+  },
+  ````
+
+  
+
 ...
