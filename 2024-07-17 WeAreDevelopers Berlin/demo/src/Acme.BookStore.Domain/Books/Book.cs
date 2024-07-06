@@ -1,8 +1,10 @@
 ﻿using System;
+using Volo.Abp.Auditing;
 using Volo.Abp.Domain.Entities.Auditing;
 
 namespace Acme.BookStore.Books;
 
+[Audited]
 public class Book : AuditedAggregateRoot<Guid>
 {
     public string Name { get; set; }

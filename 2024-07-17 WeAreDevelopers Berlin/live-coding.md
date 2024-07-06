@@ -660,5 +660,11 @@
   visible: abp.auth.isGranted('BookStore.Books.Delete'),
   ````
 
+## Audit Logging
+
+* See `[AbpAuditLogs]` and `[AbpAuditLogActions]` tables to show that ABP saves all the actions.
+* Add `[Audited]` on top of the `Book` entity and show it starts saving all changes for that entity.
+  * See `[AbpEntityChanges]` and `[AbpEntityPropertyChanges]` database table records.
+
 
 
