@@ -15,6 +15,7 @@
                             [
                                 {
                                     text: 'Delete',
+                                    visible: abp.auth.isGranted('BookStore.Books.Delete'),
                                     confirmMessage: function (data) {
                                         return 'Are you sure to delete the book: ' + data.record.name;
                                     },

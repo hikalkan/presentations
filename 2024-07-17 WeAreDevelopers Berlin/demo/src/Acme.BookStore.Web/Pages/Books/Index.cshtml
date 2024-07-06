@@ -1,4 +1,7 @@
 ﻿@page
+@using Acme.BookStore.Permissions
+@using Microsoft.AspNetCore.Authorization
+@inject IAuthorizationService AuthorizationService
 @model Acme.BookStore.Web.Pages.Books.Index
 
 @section scripts
@@ -13,10 +16,13 @@
                 <abp-card-title>Books</abp-card-title>
             </abp-column>
             <abp-column size-md="_6" class="text-end">
-                <abp-button id="NewBookButton"
-                            text="New Book"
-                            icon="plus"
-                            button-type="Primary"/>
+                @if (await AuthorizationService.IsGrantedAsync(BookStorePermissions.Books_Create))
+                {
+                    <abp-button id="NewBookButton"
+                                text="New Book"
+                                icon="plus"
+                                button-type="Primary"/>
+                }
             </abp-column>
         </abp-row>
     </abp-card-header>
