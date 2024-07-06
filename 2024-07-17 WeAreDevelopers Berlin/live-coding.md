@@ -100,7 +100,10 @@
   }
   ````
 
+## Create the  Data Transfer Objects
+
 * Create `BookAppService` in the `Application` project (in the `Books` folder):
+
   ````csharp
   using System;
   using Volo.Abp.Application.Dtos;
@@ -127,6 +130,7 @@
   ````
 
 * Create `BookDto` in the `Application.Contracts` project (in the `Books` folder):
+
   ````csharp
   using System;
   using Volo.Abp.Application.Dtos;
@@ -174,4 +178,27 @@
   CreateMap<CreateUpdateBookDto, Book>();
   ````
 
-* .
+## Test the API
+
+* Open `/swagger`, show the Book API, create a book.
+
+* Test the API on the developer console, get list of the books:
+  ````javascript
+  acme.bookStore.books.book.getList({})
+      .done(function (result) { console.log(result); });
+  ````
+
+* Test the API on the developer console, create a new book:
+  ````js
+  acme.bookStore.books.book.create({
+          name: 'Foundation',
+          type: 7,
+          publishDate: '1951-05-24',
+          price: 21.5
+      }).then(function (result) {
+          console.log('successfully created the book with id: ' + result.id);
+      });
+  ````
+
+  
+
