@@ -1,0 +1,18 @@
+﻿@page
+@using Acme.BookStore.Web.Pages.Books
+@using Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Modal
+@model CreateModal
+
+@{
+    Layout = null;
+}
+
+<abp-dynamic-form abp-model="Book" asp-page="/Books/CreateModal">
+    <abp-modal>
+        <abp-modal-header title="New Book"></abp-modal-header>
+        <abp-modal-body>
+            <abp-form-content />
+        </abp-modal-body>
+        <abp-modal-footer buttons="@(AbpModalButtons.Cancel|AbpModalButtons.Save)"></abp-modal-footer>
+    </abp-modal>
+</abp-dynamic-form>

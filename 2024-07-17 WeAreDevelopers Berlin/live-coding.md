@@ -222,7 +222,10 @@
   );
   ````
 
+* Run the application and open the Books page.
+
 * Replace the `Index.cshtml` content with the following:
+
   ````html
   @page
   @model Acme.BookStore.Web.Pages.Books.Index
@@ -293,19 +296,93 @@
   });
   ````
 
+* Create a `CreateModal` Razor Page under the `Pages/Books` folder.
+
+* Replace `CreateModal.cshtml.cs` content with the following:
+  ````csharp
+  using System.Threading.Tasks;
+  using Acme.BookStore.Books;
+  using Microsoft.AspNetCore.Mvc;
   
+  namespace Acme.BookStore.Web.Pages.Books
+  {
+      public class CreateModal : BookStorePageModel
+      {
+          [BindProperty]
+          public CreateUpdateBookDto Book { get; set; }
+  
+          private readonly IBookAppService _bookAppService;
+  
+          public CreateModal(IBookAppService bookAppService)
+          {
+              _bookAppService = bookAppService;
+          }
+  
+          public void OnGet()
+          {
+              Book = new CreateUpdateBookDto();
+          }
+  
+          public async Task<IActionResult> OnPostAsync()
+          {
+              await _bookAppService.CreateAsync(Book);
+              return NoContent();
+          }
+      }
+  }
+  ````
 
-* .
+* Replace `CreateModal.cshtml` with the following content:
+  ````html
+  @page
+  @using Acme.BookStore.Web.Pages.Books
+  @using Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Modal
+  @model CreateModal
+  
+  @{
+      Layout = null;
+  }
+  
+  <abp-dynamic-form abp-model="Book" asp-page="/Books/CreateModal">
+      <abp-modal>
+          <abp-modal-header title="New Book"></abp-modal-header>
+          <abp-modal-body>
+              <abp-form-content />
+          </abp-modal-body>
+          <abp-modal-footer buttons="@(AbpModalButtons.Cancel|AbpModalButtons.Save)"></abp-modal-footer>
+      </abp-modal>
+  </abp-dynamic-form>
+  ````
 
+* Add a "New Book" button to the Index page's header (Replace the `abp-card-header`):
+  ````html
+  <abp-card-header>
+      <abp-row>
+          <abp-column size-md="_6">
+              <abp-card-title>Books</abp-card-title>
+          </abp-column>
+          <abp-column size-md="_6" class="text-end">
+              <abp-button id="NewBookButton"
+                          text="New Book"
+                          icon="plus"
+                          button-type="Primary"/>
+          </abp-column>
+      </abp-row>
+  </abp-card-header>
+  ````
 
+* Add the following code under the `dataTable` configuration in the `Index.cshtml.js` file:
+  ````js
+  var createModal = new abp.ModalManager(abp.appPath + 'Books/CreateModal');
+  
+  createModal.onResult(function () {
+      dataTable.ajax.reload();
+  });
+  
+  $('#NewBookButton').click(function (e) {
+      e.preventDefault();
+      createModal.open();
+  });
+  ````
 
-### The Book List Page
-
-
-
-### Creating a new book
-
-
-
-### Deleting a book
-
+...

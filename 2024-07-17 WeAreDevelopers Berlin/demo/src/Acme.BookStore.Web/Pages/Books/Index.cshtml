@@ -8,7 +8,17 @@
 
 <abp-card>
     <abp-card-header>
-        <h2>Books</h2>
+        <abp-row>
+            <abp-column size-md="_6">
+                <abp-card-title>Books</abp-card-title>
+            </abp-column>
+            <abp-column size-md="_6" class="text-end">
+                <abp-button id="NewBookButton"
+                            text="New Book"
+                            icon="plus"
+                            button-type="Primary"/>
+            </abp-column>
+        </abp-row>
     </abp-card-header>
     <abp-card-body>
         <abp-table striped-rows="true" id="BooksTable"></abp-table>
