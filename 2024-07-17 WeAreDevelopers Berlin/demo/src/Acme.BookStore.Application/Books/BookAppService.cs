@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using Volo.Abp;
 using Volo.Abp.Application.Dtos;
 using Volo.Abp.Application.Services;
+using Volo.Abp.Domain.Entities.Caching;
 using Volo.Abp.Domain.Repositories;
 
 namespace Acme.BookStore.Books;
@@ -14,10 +15,17 @@ namespace Acme.BookStore.Books;
 public class BookAppService : ApplicationService, IBookAppService
 {
     private readonly IRepository<Book, Guid> _bookRepository;
+    private readonly IEntityCache<BookDto, Guid> _bookCache;
 
-    public BookAppService(IRepository<Book, Guid> bookRepository)
+    public BookAppService(IRepository<Book, Guid> bookRepository, IEntityCache<BookDto, Guid> bookCache)
     {
         _bookRepository = bookRepository;
+        _bookCache = bookCache;
+    }
+
+    public async Task<BookDto> GetAsync(Guid id)
+    {
+        return await _bookCache.GetAsync(id);
     }
 
     public async Task<PagedResultDto<BookDto>> GetListAsync(PagedAndSortedResultRequestDto input)

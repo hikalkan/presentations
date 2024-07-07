@@ -779,3 +779,29 @@
   ````
 
   * Unit of work system cancelled the database transaction and `UserFriendlyException` shows the given message to the user!
+
+## Caching Entities
+
+* Inject `IEntityCache<Book, Guid> bookCache` to the `BookAppService` class.
+
+* Add a new `GetAsync` method:
+
+* ```csharp
+  public async Task<BookDto> GetAsync(Guid id)
+  {
+      var book = await _bookCache.GetAsync(id);
+      return ObjectMapper.Map<Book, BookDto>(book);
+  }
+  ```
+
+* Add the following line into `ConfigureServices` method of the `BookStoreApplicationModule` class:
+  ````csharp
+  context.Services.AddEntityCache<Book, Guid>();
+  ````
+
+* Switch to caching a DTO instead of the entity:
+
+  * Change `AddEntityCache<Book, Guid>()` to `AddEntityCache<Book, BookDto, Guid>()`
+  * Inject `IEntityCache<BookDto, Guid>` in `BookAppService` (instead `IEntityCache<Book, Guid>`)
+  * Change `GetAsync` method body to: `return await _bookCache.GetAsync(id);`
+
