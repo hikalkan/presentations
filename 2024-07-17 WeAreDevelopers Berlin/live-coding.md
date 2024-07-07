@@ -822,4 +822,10 @@
   dotnet ef database update
   ````
 
-* 
+## Localization
+
+* Add `"Books": "Books"` into `en.json` file under the `Domain.Shared` project's `Localization/BookStore` folder.
+* Add `"Books": "Kitaplar"` into `tr.json` file under the `Domain.Shared` project's `Localization/BookStore` folder.
+* Add `@inject IStringLocalizer<BookStoreResource> L` to `Index.cshtml` file.
+* Replace `Books` title with `@L["Books"]` usage.
+* Show `abp.localization.localize('Books');` in the developer console.

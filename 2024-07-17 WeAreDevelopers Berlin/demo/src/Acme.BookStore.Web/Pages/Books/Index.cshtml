@@ -1,7 +1,10 @@
 ﻿@page
+@using Acme.BookStore.Localization
 @using Acme.BookStore.Permissions
 @using Microsoft.AspNetCore.Authorization
+@using Microsoft.Extensions.Localization
 @inject IAuthorizationService AuthorizationService
+@inject IStringLocalizer<BookStoreResource> L
 @model Acme.BookStore.Web.Pages.Books.Index
 
 @section scripts
@@ -13,7 +16,7 @@
     <abp-card-header>
         <abp-row>
             <abp-column size-md="_6">
-                <abp-card-title>Books</abp-card-title>
+                <abp-card-title>@L["Books"]</abp-card-title>
             </abp-column>
             <abp-column size-md="_6" class="text-end">
                 @if (await AuthorizationService.IsGrantedAsync(BookStorePermissions.Books_Create))
