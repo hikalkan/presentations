@@ -805,3 +805,21 @@
   * Inject `IEntityCache<BookDto, Guid>` in `BookAppService` (instead `IEntityCache<Book, Guid>`)
   * Change `GetAsync` method body to: `return await _bookCache.GetAsync(id);`
 
+## Convert Book entity to Multi-Tenant
+
+* Implement `IMultiTenant` interface for the `Book` entity
+  ````csharp
+  public Guid? TenantId { get; set; }
+  ````
+
+* Create a new database migration:
+  ````csharp
+  dotnet ef migrations add "Book_MultiTenant"
+  ````
+
+* Update the database:
+  ````csharp
+  dotnet ef database update
+  ````
+
+* 
