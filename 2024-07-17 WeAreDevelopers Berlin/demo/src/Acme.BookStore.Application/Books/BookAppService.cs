@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Acme.BookStore.Permissions;
 using Microsoft.AspNetCore.Authorization;
+using Volo.Abp;
 using Volo.Abp.Application.Dtos;
 using Volo.Abp.Application.Services;
 using Volo.Abp.Domain.Repositories;
@@ -18,7 +19,7 @@ public class BookAppService : ApplicationService, IBookAppService
     {
         _bookRepository = bookRepository;
     }
-    
+
     public async Task<PagedResultDto<BookDto>> GetListAsync(PagedAndSortedResultRequestDto input)
     {
         var books = await _bookRepository.GetPagedListAsync(
@@ -41,6 +42,12 @@ public class BookAppService : ApplicationService, IBookAppService
     {
         var book = ObjectMapper.Map<CreateUpdateBookDto, Book>(input);
         await _bookRepository.InsertAsync(book);
+        
+        if (input.Name == "test")
+        {
+            throw new UserFriendlyException("Test books are not allowed!");
+        }
+
         return ObjectMapper.Map<Book, BookDto>(book);
     }
 

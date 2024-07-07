@@ -759,3 +759,23 @@
 
 * Add `[Authorize(BookStorePermissions.Books_Delete)]` to the `DeleteAsync` method.
 
+## Repositories
+
+* Show the https://docs.abp.io/en/abp/latest/Repositories document
+  * Standard methods
+  * LINQ over a repository
+  * Bulk operations
+  * Soft-delete entities
+  * Custom repositories
+
+## Unit of Work & Exception Handling
+
+* Add the following code inside the `CreateAsync` method, just after the `_bookRepository.InsertAsync` call:
+  ````csharp
+  if (input.Name == "test")
+  {
+      throw new UserFriendlyException("Test books are not allowed!");
+  }
+  ````
+
+  * Unit of work system cancelled the database transaction and `UserFriendlyException` shows the given message to the user!
