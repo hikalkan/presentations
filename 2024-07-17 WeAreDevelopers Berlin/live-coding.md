@@ -666,5 +666,96 @@
 * Add `[Audited]` on top of the `Book` entity and show it starts saving all changes for that entity.
   * See `[AbpEntityChanges]` and `[AbpEntityPropertyChanges]` database table records.
 
+## Implement the BookAppService Manually
 
+* Replace `IBookAppService` with the following content:
+  ````csharp
+  using System;
+  using System.Threading.Tasks;
+  using Volo.Abp.Application.Dtos;
+  using Volo.Abp.Application.Services;
+  
+  namespace Acme.BookStore.Books;
+  
+  public interface IBookAppService : IApplicationService
+  {
+      Task<PagedResultDto<BookDto>> GetListAsync(PagedAndSortedResultRequestDto input);
+  
+      Task<BookDto> CreateAsync(CreateUpdateBookDto input);
+  
+      Task DeleteAsync(Guid id);
+  }
+  ````
+
+* Replace `BookAppService` with the following content:
+  ````csharp
+  using System;
+  using System.Threading.Tasks;
+  using Volo.Abp.Application.Dtos;
+  
+  namespace Acme.BookStore.Books;
+  
+  public class BookAppService : ApplicationService, IBookAppService
+  {
+      public async Task<PagedResultDto<BookDto>> GetListAsync(PagedAndSortedResultRequestDto input)
+      {
+          throw new NotImplementedException();
+      }
+  
+      public async Task<BookDto> CreateAsync(CreateUpdateBookDto input)
+      {
+          throw new NotImplementedException();
+      }
+  
+      public async Task DeleteAsync(Guid id)
+      {
+          throw new NotImplementedException();
+      }
+  }
+  ````
+
+* Inject `IRepository<Book, Guid>` to `BookAppService` (add new field and constructor):
+  ````csharp
+  private readonly IRepository<Book, Guid> _bookRepository;
+  
+  public BookAppService(IRepository<Book, Guid> bookRepository)
+  {
+      _bookRepository = bookRepository;
+  }
+  ````
+
+* Implement the `GetListAsync` method:
+  ````csharp
+  var books = await _bookRepository.GetPagedListAsync(
+      input.SkipCount,
+      input.MaxResultCount,
+      input.Sorting ?? nameof(Book.Name)
+  );
+  
+  var totalBookCount = await _bookRepository.GetCountAsync();
+  
+  return new PagedResultDto<BookDto>
+  {
+      TotalCount = totalBookCount,
+      Items = ObjectMapper.Map<List<Book>, List<BookDto>>(books)
+  };
+  ````
+
+* Implement the `CreateAsync` method:
+  ````csharp
+  var book = ObjectMapper.Map<CreateUpdateBookDto, Book>(input);
+  await _bookRepository.InsertAsync(book);
+  return ObjectMapper.Map<Book, BookDto>(book);
+  ````
+
+* Implement the `DeleteAsync` method:
+  ````csharp
+  await _bookRepository.DeleteAsync(id);
+  ````
+
+* Add `[Authorize(BookStorePermissions.Books)]` to the `BookAppService` class.
+
+* Add `[Authorize(BookStorePermissions.Books_Create)]` to the `CreateAsync` method.
+
+* Add `[Authorize(BookStorePermissions.Books_Delete)]` to the `DeleteAsync` method.
 

@@ -1,26 +1,52 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using Acme.BookStore.Permissions;
+using Microsoft.AspNetCore.Authorization;
 using Volo.Abp.Application.Dtos;
 using Volo.Abp.Application.Services;
 using Volo.Abp.Domain.Repositories;
 
 namespace Acme.BookStore.Books;
 
-public class BookAppService :
-    CrudAppService<
-        Book, //The Book entity
-        BookDto, //Used to show books
-        Guid, //Primary key of the book entity
-        PagedAndSortedResultRequestDto, //Used for paging/sorting
-        CreateUpdateBookDto>, //Used to create/update a book
-    IBookAppService //implement the IBookAppService
+[Authorize(BookStorePermissions.Books)]
+public class BookAppService : ApplicationService, IBookAppService
 {
-    public BookAppService(IRepository<Book, Guid> repository)
-        : base(repository)
+    private readonly IRepository<Book, Guid> _bookRepository;
+
+    public BookAppService(IRepository<Book, Guid> bookRepository)
     {
-        GetPolicyName = BookStorePermissions.Books;
-        GetListPolicyName = BookStorePermissions.Books;
-        CreatePolicyName = BookStorePermissions.Books_Create;
-        DeletePolicyName = BookStorePermissions.Books_Delete;
+        _bookRepository = bookRepository;
+    }
+    
+    public async Task<PagedResultDto<BookDto>> GetListAsync(PagedAndSortedResultRequestDto input)
+    {
+        var books = await _bookRepository.GetPagedListAsync(
+            input.SkipCount,
+            input.MaxResultCount,
+            input.Sorting ?? nameof(Book.Name)
+        );
+
+        var totalBookCount = await _bookRepository.GetCountAsync();
+
+        return new PagedResultDto<BookDto>
+        {
+            TotalCount = totalBookCount,
+            Items = ObjectMapper.Map<List<Book>, List<BookDto>>(books)
+        };
+    }
+
+    [Authorize(BookStorePermissions.Books_Create)]
+    public async Task<BookDto> CreateAsync(CreateUpdateBookDto input)
+    {
+        var book = ObjectMapper.Map<CreateUpdateBookDto, Book>(input);
+        await _bookRepository.InsertAsync(book);
+        return ObjectMapper.Map<Book, BookDto>(book);
+    }
+
+    [Authorize(BookStorePermissions.Books_Delete)]
+    public async Task DeleteAsync(Guid id)
+    {
+        await _bookRepository.DeleteAsync(id);
     }
 }
