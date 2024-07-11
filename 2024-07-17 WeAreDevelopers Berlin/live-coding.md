@@ -684,6 +684,8 @@
   visible: abp.auth.isGranted('BookStore.Books.Delete'),
   ````
 
+* Test the application UI. Remove permissions, try to delete a book from console, etc.
+
 ## Audit Logging
 
 * See `[AbpAuditLogs]` and `[AbpAuditLogActions]` tables to show that ABP saves all the actions.
@@ -810,7 +812,7 @@
 
 * Add a new `GetAsync` method:
 
-* ```csharp
+  ```csharp
   public async Task<BookDto> GetAsync(Guid id)
   {
       var book = await _bookCache.GetAsync(id);
@@ -831,11 +833,14 @@
 
 ## Convert Book entity to Multi-Tenant
 
+* First create a tenant and show it is not multi-tenant yet.
+  
 * Implement `IMultiTenant` interface for the `Book` entity
+  
   ````csharp
-  public Guid? TenantId { get; set; }
+  public Guid? TenantId { get; private set; }
   ````
-
+  
 * Create a new database migration:
   ````csharp
   dotnet ef migrations add "Book_MultiTenant"
