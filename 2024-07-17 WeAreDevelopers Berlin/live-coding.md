@@ -1,5 +1,11 @@
 # Workshop Live Coding Notes
 
+## Preparations
+
+* Keep the`D:\Temp\Demos` folder open
+* Open SQL Server Management Studio (with `(LocalDb)\MSSQLLocalDB`) and delete old BookStore databases if available.
+* Open ABP Studio as administrator
+
 ## Create a new ABP solution
 
 * Use the `new` command to create a new ABP solution:
@@ -10,7 +16,7 @@
 * Open the solution in your IDE
 * Run the `DbMigrator` application to create the database
 
-* Run the `install-libs` command if needed:
+* Run the `install-libs` command if needed (it is normally auto-run by ABP CLI):
   ````bash
   abp install-libs
   ````
@@ -72,11 +78,15 @@
   ````
 
 * Add a new database migration:
-  ````csharp
+  ````bash
   dotnet ef migrations add Created_Book_Entity
   ````
 
-* Run the `DbMigrator` application again to update the database
+* Run the `DbMigrator` application again to update the database, or execute the following terminal command:
+  ````bash
+  dotnet ef database update
+  ````
+
 
 ## Create the Application Service
 
@@ -99,8 +109,6 @@
   
   }
   ````
-
-## Create the  Data Transfer Objects
 
 * Create `BookAppService` in the `Application` project (in the `Books` folder):
 
@@ -128,6 +136,8 @@
       }
   }
   ````
+
+## Create the  Data Transfer Objects
 
 * Create `BookDto` in the `Application.Contracts` project (in the `Books` folder):
 
