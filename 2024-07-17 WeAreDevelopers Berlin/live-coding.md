@@ -110,7 +110,10 @@
   }
   ````
 
-* Create `BookAppService` in the `Application` project (in the `Books` folder):
+* Create `BookAppService` in the `Application` project (in the `Books` folder)
+
+  * First implement it automatically to see the methods we need to fill in.
+  * Replace the code with the following:
 
   ````csharp
   using System;
@@ -139,7 +142,7 @@
 
 ## Create the  Data Transfer Objects
 
-* Create `BookDto` in the `Application.Contracts` project (in the `Books` folder):
+* Create a `BookDto` class in the `Application.Contracts` project (in the `Books` folder):
 
   ````csharp
   using System;
@@ -156,7 +159,7 @@
   }
   ````
 
-* Create `BookDto` in the `Application.Contracts` project (in the `Books` folder):
+* Create a `CreateUpdateBookDto` class in the `Application.Contracts` project (in the `Books` folder):
   ````csharp
   using System;
   using System.ComponentModel.DataAnnotations;
@@ -167,14 +170,14 @@
   {
       [Required]
       [StringLength(128)]
-      public string Name { get; set; } = string.Empty;
+      public string Name { get; set; }
   
       [Required]
       public BookType Type { get; set; } = BookType.Undefined;
   
       [Required]
       [DataType(DataType.Date)]
-      public DateTime PublishDate { get; set; } = DateTime.Now;
+      public DateTime PublishDate { get; set; }
   
       [Required]
       public float Price { get; set; }
@@ -190,7 +193,9 @@
 
 ## Test the API
 
-* Open `/swagger`, show the Book API, create a book.
+* Open `/swagger`, show the Book API
+
+* Create a book on the swagger UI.
 
 * Test the API on the developer console, get list of the books:
   ````javascript
@@ -211,6 +216,8 @@
   ````
 
 ## Build the User Interface
+
+### UI: Listing the books
 
 * Create a `Books` folder under the `Pages` folder, then create a new `Index` Razor Page under it:
   ````html
@@ -242,7 +249,7 @@
   
   @section scripts
   {
-      <abp-script src="/Pages/Books/Index.js" />
+      <abp-script src="/Pages/Books/Index.cshtml.js" />
   }
   
   <abp-card>
@@ -305,6 +312,10 @@
       );
   });
   ````
+
+* Run the application and see the book list!
+
+### UI: Creating a new book
 
 * Create a `CreateModal` Razor Page under the `Pages/Books` folder.
 
@@ -385,17 +396,20 @@
   ````js
   var createModal = new abp.ModalManager(abp.appPath + 'Books/CreateModal');
   
-  createModal.onResult(function () {
-      dataTable.ajax.reload();
-  });
-  
   $('#NewBookButton').click(function (e) {
       e.preventDefault();
       createModal.open();
   });
+  
+  createModal.onResult(function () {
+      dataTable.ajax.reload();
+  });
   ````
 
+### UI: Deleting a book
+
 * Add the following definition to the `columnDefs` list, before the `Name` column in `Index.cshtml.js`:
+
   ````js
   {
       title: 'Actions',
