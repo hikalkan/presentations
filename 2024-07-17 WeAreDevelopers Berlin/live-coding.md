@@ -8,21 +8,25 @@
 
 ## Create a new ABP solution
 
+* Install the ABP CLI if you haven't done yet:
+  ````bash
+  dotnet tool install -g Volo.Abp.Cli
+  ````
+
 * Use the `new` command to create a new ABP solution:
+  
   ````bash
   abp new Acme.BookStore -t app
   ````
-
+  
 * Open the solution in your IDE
+
 * Run the `DbMigrator` application to create the database
 
-* Run the `install-libs` command if needed (it is normally auto-run by ABP CLI):
-  ````bash
-  abp install-libs
-  ````
-
 * Run the application
+
 * Explore the application UI and explain the fundamental concepts (roles, users, responsive UI, login, register,...)
+
 * Explore the solution structure
 
 ## The Domain Layer
