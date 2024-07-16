@@ -13,6 +13,8 @@
   dotnet tool install -g Volo.Abp.Cli
   ````
 
+* Create a folder named `D:\Temp\Demos\Acme.BookStore` and locate inside in a terminal window.
+  
 * Use the `new` command to create a new ABP solution:
   
   ````bash
