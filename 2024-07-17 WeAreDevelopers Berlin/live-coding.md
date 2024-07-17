@@ -1,11 +1,5 @@
 # Workshop Live Coding Notes
 
-## Preparations
-
-* Keep the`D:\Temp\Demos` folder open
-* Open SQL Server Management Studio (with `(LocalDb)\MSSQLLocalDB`) and delete old BookStore databases if available.
-* Open ABP Studio as administrator
-
 ## Create a new ABP solution
 
 * Install the ABP CLI if you haven't done yet:
